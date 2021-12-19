@@ -6,7 +6,7 @@ import Admin from './Containers/Admin/Admin.jsx';
 import Post from './Containers/Post/Post.jsx';
 import Login from './Containers/Login/Login.jsx';
 import Profile from './Containers/Profile/Profile.jsx';
-import Register from './Containers/Register/Register';
+import Register from './Containers/Register/Register.jsx';
 
 
 function App() {

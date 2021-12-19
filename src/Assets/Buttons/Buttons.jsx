@@ -4,19 +4,19 @@ import './Buttons.scss';
 
 import { useNavigate } from 'react-router-dom';
 
-const Boton = (props) => {
+const Buttons = (props) => {
 
     const history = useNavigate();
 
-    const llevame = () => {
+    const go_to = () => {
         history(props.url);
     }
 
     console.log("props: ", props);
     return (
-        <div className="designBoton" onClick={()=>llevame()}>{props.destino}</div>
+        <div className="designButtons" onClick={()=>go_to()}>{props.destiny}</div>
         
     )
 };
 
-export default Boton;
+export default Buttons;

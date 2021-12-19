@@ -14,11 +14,13 @@ const Header = () => {
             <div>
                 <img id="logo" src={logo} alt="logo"/>
             </div>
+
             <div id="menu">
                
                     
                 
             </div>
+            
         </div>
     )
 

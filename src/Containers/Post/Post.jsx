@@ -8,7 +8,7 @@ const Post = () => {
 
     return (
         
-        <div class='designPost'></div>
+        <div class='designPost'><p>Esto es Post</p></div>
         
         
     )

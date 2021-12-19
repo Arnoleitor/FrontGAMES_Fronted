@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../Assets/Images/Logo.png';
 // import { connect } from 'react-redux';
-import Buttons from '../../Assets/Buttons/Buttons';
+import Buttons from '../../Components/Buttons/Buttons';
 
 
 const Header = () => {

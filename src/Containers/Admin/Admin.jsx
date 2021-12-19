@@ -8,7 +8,7 @@ const Admin = () => {
 
     return (
         
-        <div class='designAdmin'></div>
+        <div class='designAdmin'><p>Esto es Admin</p></div>
         
         
     )

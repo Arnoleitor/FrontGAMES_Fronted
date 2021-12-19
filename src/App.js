@@ -4,6 +4,10 @@ import Header from './Components/Header/Header.jsx';
 import Home from './Containers/Home/Home.jsx';
 import Admin from './Containers/Admin/Admin.jsx';
 import Post from './Containers/Post/Post.jsx';
+import Login from './Containers/Login/Login.jsx';
+import Profile from './Containers/Profile/Profile.jsx';
+import Register from './Containers/Register/Register';
+
 
 function App() {
     return (
@@ -16,6 +20,9 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/Admin" element={<Admin/>}/>
           <Route path="/Post" element={<Post/>}/>
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Profile" element={<Profile/>}/>
+          <Route path="/Register" element={<Register/>}/>
        
           </Routes>
         

@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Header from './Components/Header/Header.jsx';
 import Home from './Containers/Home/Home.jsx';
 import Admin from './Containers/Admin/Admin.jsx';
-import Wall from './Containers/Wall/Wall.jsx';
+import Post from './Containers/Post/Post.jsx';
 
 function App() {
     return (
@@ -15,7 +15,7 @@ function App() {
 
           <Route path="/" element={<Home/>}/>
           <Route path="/Admin" element={<Admin/>}/>
-          <Route path="/Wall" element={<Wall/>}/>
+          <Route path="/Post" element={<Post/>}/>
        
           </Routes>
         

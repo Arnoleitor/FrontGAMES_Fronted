@@ -5,25 +5,30 @@
     padding: 7em;
 }
 #relleno1{
-    background-color: white;
-    height: 4.4em;
-    width: 40em;
+      
+        height: 4.4em;
+        width: 40em;
+        border: unset;
+        border-bottom: 1px solid black;
+        background: unset;
+        color: black;
 
 }
 #recuadroRegistro{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
-    background-color:  rgba(0, 0, 0, 0.356);
+    width: 60em;
+    background-color: rgb(255 255 255);
     margin: auto;
-    color: white;
+    color: black;
     padding: 2em 7em;
+    border-radius: 0.5em;
 }
 .botonSend {
     height: 2.1em;
     width: 7em;
-    border-radius: 0.5em;
+    border-radius: 0.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,4 +38,8 @@
     margin-top: 20px;
     transition: 0.4s;
 
+}
+#texto{
+    font-family: monospace;
+    font-size: large;
 }

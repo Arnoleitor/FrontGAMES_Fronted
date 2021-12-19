@@ -7,6 +7,7 @@ import Post from './Containers/Post/Post.jsx';
 import Login from './Containers/Login/Login.jsx';
 import Profile from './Containers/Profile/Profile.jsx';
 import Register from './Containers/Register/Register.jsx';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           <Route path="/Register" element={<Register/>}/>
        
           </Routes>
-        
+        <Footer/>
         </BrowserRouter>
         
         

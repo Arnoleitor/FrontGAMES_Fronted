@@ -1,14 +1,7 @@
-.designBoton {
+.designButtons {
 
-    height: 2.3em;
-    display: flex;
-    width: 4em;
-    margin: 1em;
-    border-radius: 0.2em;
-    transition: 0.4s;
-    font-size: 25px;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
+       display: flex;
+       font-size: 20px;
+       cursor: pointer;
+       margin-right: 2em;
 }

@@ -50,9 +50,19 @@ const Post = () => {
 
           <div>
 
-            <div className='friends'><p>friends</p></div>
+            <div className='friends'>
+             <div className='headerfriends'><p>friends</p>
+            </div>
+            </div>
 
-            <div className='chat'><p>chat</p></div>
+            <div className='chat'><p>chat</p>
+            
+            <div className='windowChat'>
+            <div className='headerChat'><p>Pepe</p>
+            </div>
+
+            </div>
+            </div>
 
           </div>
         </div>

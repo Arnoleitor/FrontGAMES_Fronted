@@ -1,0 +1,21 @@
+@import 'Scss/main.scss';
+
+@import '/src/Containers/Post/Post.scss';
+@import 'Components/Footer/Footer.scss';
+@import 'Components/Admin_menu_comp/Admin_menu_comp.scss';
+
+
+@import 'Containers/Admin/Admin_home/Admin_home.scss';
+@import 'Containers/Admin/Admin_offers/Admin_offers.scss';
+@import 'Containers/Admin/Admin_profile/Admin_profile.scss';
+
+@import 'Containers/Home/Home.scss';
+@import 'Containers/Login/Login.scss';
+@import 'Containers/Registration/Registration.scss';
+@import 'Containers/Architects/Architects.scss';
+
+
+*{
+font-family: 'Nunito';
+}
+html,body,#root,header {padding:0; margin: 0; }

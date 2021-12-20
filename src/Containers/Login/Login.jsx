@@ -16,6 +16,7 @@ const Login = () => {
             <input id="relleno1"type='password' name='password2' title='password2'  lenght='30' placeholder='Repeat Password' /> 
             <div className="sendButton">Log in</div>
             <div className="error">{}</div>
+            
         </div>
         </div>
     )

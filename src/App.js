@@ -8,6 +8,7 @@ import Login from './Containers/Login/Login.jsx';
 import Profile from './Containers/Profile/Profile.jsx';
 import Register from './Containers/Register/Register.jsx';
 import Footer from './Components/Footer/Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {

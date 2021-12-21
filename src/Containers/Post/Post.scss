@@ -21,7 +21,7 @@ margin-top: 2.5em;
     height: 45em;
 }
 .wall2{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     margin-top: 2.5em;
     width: 50em;
     height: 45em;
@@ -56,8 +56,9 @@ margin-top: 2.5em;
     height: 20em;
     color: black;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .headerChat {
     width: 100%;
@@ -66,6 +67,7 @@ margin-top: 2.5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
 }
 .headerfriends{
     width: 100%;
@@ -75,3 +77,114 @@ margin-top: 2.5em;
     flex-direction: row;
     justify-content: center;
 }
+.zonechat{
+    height: 2em;
+    width: 318.9px;
+}
+.sendbutton {
+    background-color: green;
+    color: white;
+    margin-top: 0.4em;
+    display: flex;
+    justify-content: center;
+}
+
+.my-update {
+    width: 30em;
+    height: 25em;
+    background-color: #000000bf;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    display: none;
+    }
+    #createpost  {
+    color: black;
+    justify-content: flex-end;
+    border-radius: 2em;
+    background-color: green;
+    
+    }
+    .seeWindows{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 81%);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+    .open-files-back-dark {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000d3;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    }
+    .createPost{
+    width: 100%;
+    max-width: 16em;
+    height: 100%;
+    max-height: 10em;
+    display: none;
+    }
+    .WindowMessagePopUp{
+    background-color: #ffffff;
+    font-size: 1.4em;
+    cursor: pointer;
+    display: block;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    div#X {
+    display: flex;
+    justify-content: flex-end;
+    }
+    .buttonCreatePost{
+        display: flex;
+        background-color: green;
+        width: 5em;
+        border-radius: 0.2em;
+        margin-left: 18em;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .buttonDeletePost{
+        background-color: rgb(185, 14, 14);
+        width: fit-content;
+        border-radius: 0.2em;
+        margin-left: 18em;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+
+    }
+
+    .popUsStyle{
+        border-radius: 0.5em;
+    }
+    div#CLOSE {
+    background-color: #5cb6ff;
+    border-radius: 0.2em;
+    width: 17em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+    

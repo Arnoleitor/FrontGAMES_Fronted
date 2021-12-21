@@ -71,10 +71,11 @@ const Post = () => {
       </nav>
       <div className='Container'>
 
-        <div className='wall1'>
+        {/* <div className='wall1'>
 
-        </div>
+        </div> */}
         <div className='wall2'>
+          
           <div className='buttonsPost'>
 
             <div onClick={() => createpost()} className='buttonCreatePost'>

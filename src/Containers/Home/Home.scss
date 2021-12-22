@@ -89,17 +89,19 @@ div#img1 {
 }
 div#img2 {
   background-image: url("../../Assets/Images/psn.png");
-  width: 20%;
-  height: 15em;
+  width: 19%;
+  height: 14em;
   background-size: cover;
   background-repeat: round;
+  margin-top: 0.5em;
 }
 div#img3 {
   background-image: url("../../Assets/Images/nintendo.png");
   width: 20%;
-  height: 15em;
+  height: 13em;
   background-size: cover;
   background-repeat: round;
+  margin-top: 1em;
 }
 div#img4 {
   background-image: url("../../Assets/Images/pc.png");
@@ -116,7 +118,7 @@ div#img4 {
   font-family: monospace;
   font-size: 2em;
   color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
+ 
 }
 .embed-responsive embed-responsive-16by9{
   display: flex;

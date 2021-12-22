@@ -37,7 +37,7 @@ const Home = () => {
           <a id="enlace4" href="Profile">Profile</a>
         </div>
         <div className='Tittle'>
-          
+
         </div>
       </div>
       <div className='IconsBusiness'>
@@ -53,13 +53,24 @@ const Home = () => {
         <div id="img4">
 
         </div>
-        
+
       </div>
-      <p className='parrafo'>Podras hacer amigos de todas estas compañias!</p>
-     
+        <p className='parrafo'>¡Podras hacer amigos de todas estas compañias!</p>
+      <div class="list-group">
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Algunas de las compañias que podras añadir a tu perfil...</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-primary">Activision</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-secondary">Nintendo Switch</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-success">RiotGames</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-danger">Steam</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-warning">Battlenet</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-info">Blizzard</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-light">Bethesda</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-dark">Y muchas mas...</a>
+      </div>
     </div>
-    
-    
+
+
+
   )
 
 };

@@ -25,6 +25,7 @@
   .dropdown{
     position: relative;
     display: inline-block;
+    background-color: black;
    }
   
   /*submenu*/
@@ -66,3 +67,56 @@
     color: #ffffff;
     
   }
+  .IconsBusiness{
+   
+    width: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 1em;
+    background-color: whitesmoke;
+    border-radius: 7em;
+  }
+  .dropdown {
+    width: 100%;
+}
+div#img1 {
+  background-image: url("../../Assets/Images/xbox.png");
+  width: 20%;
+  height: 15em;
+  background-size: cover;
+  background-repeat: round;
+}
+div#img2 {
+  background-image: url("../../Assets/Images/psn.png");
+  width: 20%;
+  height: 15em;
+  background-size: cover;
+  background-repeat: round;
+}
+div#img3 {
+  background-image: url("../../Assets/Images/nintendo.png");
+  width: 20%;
+  height: 15em;
+  background-size: cover;
+  background-repeat: round;
+}
+div#img4 {
+  background-image: url("../../Assets/Images/pc.png");
+  width: 20%;
+  height: 15em;
+  background-size: cover;
+  background-repeat: round;
+}
+
+.parrafo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+  font-size: 2em;
+}
+.embed-responsive embed-responsive-16by9{
+  display: flex;
+}
+

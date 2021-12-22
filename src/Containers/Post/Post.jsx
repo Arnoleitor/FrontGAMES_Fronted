@@ -11,7 +11,7 @@ const Post = () => {
     element.classList.add("WindowMessagePopUp");
     let element_back = document.getElementById("openWindows");
     element_back.classList.add("seeWindows");
-    
+
   }
   const closewindowcreate = () => {
     let element = document.getElementById("createpost");
@@ -25,7 +25,7 @@ const Post = () => {
     element.classList.add("WindowMessagePopUp");
     let element_back = document.getElementById("openWindowsDelete");
     element_back.classList.add("seeWindows");
-   
+
   }
   const closewindowdeletepost = () => {
     let element = document.getElementById("delete");
@@ -52,10 +52,10 @@ const Post = () => {
                 <a class="nav-link active" aria-current="page" href="#">
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
                 </ul>
               </li>
             </ul>
@@ -71,16 +71,14 @@ const Post = () => {
       </nav>
       <div className='Container'>
 
-        {/* <div className='wall1'>
 
-        </div> */}
         <div className='wall2'>
-          
+
           <div className='buttonsPost'>
 
             <div onClick={() => createpost()} className='buttonCreatePost'>
               New Post
-              
+
             </div>
             <div onClick={() => deletepost()} className='buttonDeletePost'>
               Delete post
@@ -99,13 +97,13 @@ const Post = () => {
               <div className='popUs'>
 
                 <textarea className='popUsStyle' name="textarea" rows="8" cols="80" placeholder='Write your post here...'></textarea>
-              
+
               </div>
 
               <div className="CreateDataPost">Create post</div>
 
             </div>
-              
+
             <div className="" id="openWindowsDelete">
               <div className="createPost" id="delete">
 
@@ -142,14 +140,12 @@ const Post = () => {
             </div>
 
             <div className='chat'>
-            <div className='tittleChat'><p>PEPE</p>
-                </div>
-             
+              <div className='tittleChat'><p>PEPE</p>
+              </div>
+
               <div className='windowChat'>
 
-                {/* <div className='headerChat'><p>Pepe</p>
-                  
-                </div> */}
+
                 <div>
                   <input className='zonechat' type="text" placeholder='Write your message...' />
 

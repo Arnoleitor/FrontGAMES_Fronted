@@ -25,17 +25,17 @@
     margin-top: 2.5em;
     width: 50em;
     height: 45em;
-    border-radius: 0.1em;
+    border-radius: 1em;
 }
 .wall3{
-    background-color: #470000;
+    
     margin-top: 2.5em;
     width: 30em;
     height: 45em;
     border-radius: 0.1em;
 }
 .chat{
-    background-color: #77008b;
+    background-color: #dcdcdc;
     width: 100%;
     display: flex;
     height: 25em;
@@ -44,14 +44,15 @@
     align-items: center;
     color: white;
     border: 1px solid black;
+    border-radius: 1em;
 }
 .friends{
-    background-color:#77008b;
+    background-color:#bfbfbf;
     width: 100%;
     height: 20em;
     border: 1px solid black;
     border-bottom: none;
-
+    border-radius: 1em;
 }
 .Container {
     display: flex;
@@ -67,6 +68,7 @@
     justify-content: flex-end;
     align-items: center;
     padding: 1em;
+    background-color: #dcdcdc;
 }
 // .headerChat {
 //     width: 100%;
@@ -93,6 +95,7 @@
     border: 1px solid black;
     border-top: unset;
     border-left: unset;
+    border-radius: 1em;
 }
 .zonechat{
     height: 3em;
@@ -137,7 +140,7 @@
     color: black;
     justify-content: flex-end;
     border-radius: 2em;
-    background-color: green;
+    background-color: #9b9b9b;
     border-radius: 0.1em;
     
     }
@@ -202,6 +205,7 @@
         cursor: pointer;
         align-items: center;
         height: 3em;
+        border-radius: 1em;
     }
     .buttonCreatePost:hover {
         transition: 0.4s;
@@ -219,6 +223,7 @@
         cursor: pointer;
         align-items: center;
         height: 3em;
+        border-radius: 1em;
 
     }
     .buttonDeletePost:hover {
@@ -232,9 +237,9 @@
         border-radius: 0.5em;
     }
     div#CLOSE {
-    background-color: #5cb6ff;
+    background-color: #ffffff;
     border-radius: 0.2em;
-    width: 17em;
+    width: 16em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -254,7 +259,8 @@
     justify-content: center;
     align-items: center;
     font-family: monospace;
-    border-radius: 0.1em;
+    border-radius: 0.3em;
     border: 1px solid black;
     border-top: unset;
+    border-radius: 1em;
     }

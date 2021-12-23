@@ -53,19 +53,26 @@ const Home = () => {
         <div id="img4">
 
         </div>
-
+        
+      </div><p className='psocial'>Follow us on our social networks</p>
+      <div className='iconsSocial'>
+      <a href="http://instagram.com">
+        <div className='instagram'></div></a>
+        <div className='space'></div>
+      <a href="http://facebook.com">
+        <div className='facebook'></div></a>
       </div>
-        <p className='parrafo'>¡Podras hacer amigos de todas estas compañias!</p>
+      <p className='parrafo'>!You can make friends from all these companies!</p>
       <div class="list-group">
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Algunas de las compañias que podras añadir a tu perfil...</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-primary">Activision</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-secondary">Nintendo Switch</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-success">RiotGames</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-danger">Steam</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-warning">Battlenet</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-info">Blizzard</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-light">Bethesda</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-dark">Y muchas mas...</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Some of the companies that you can add to your profile...</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Activision</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Nintendo Switch</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">RiotGames</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Steam</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Battlenet</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Blizzard</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Bethesda</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-dark">And many more...</a>
       </div>
     </div>
 

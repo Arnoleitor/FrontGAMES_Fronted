@@ -7,13 +7,13 @@ import React from 'react';
 const Admin = () => {
 
     return (
-        
-        <div class='designAdmin'><p>Esto es Admin</p></div>
-        
-        
+
+        <div class='designAdmin'></div>
+
+
     )
 
-    
+
 };
 
 

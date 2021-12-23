@@ -14,8 +14,8 @@ const Buttons = (props) => {
 
     console.log("props: ", props);
     return (
-        <div className="designButtons" onClick={()=>go_to()}>{props.destiny}</div>
-        
+        <div className="designButtons" onClick={() => go_to()}>{props.destiny}</div>
+
     )
 };
 

@@ -81,6 +81,7 @@
   }
   .dropdown {
     width: 100%;
+  
 }
 div#img1 {
   background-image: url("../../Assets/Images/xbox.png");
@@ -127,3 +128,33 @@ div#img4 {
   display: flex;
 }
 
+.iconsSocial{
+  height: 4em;
+  width: 30em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 1em;
+}
+.instagram{
+  background-image: url("../../Assets/Images/Ikonka-Instagram.png");
+  width: 3em;
+  height: 3em;
+  background-size: cover;
+}
+.facebook{
+  background-image: url("../../Assets/Images/facebook.png");
+  width: 3em;
+  height: 3em;
+  background-size: cover;
+}
+.space {
+  width: 1em;
+}
+.psocial{
+  margin-left: 0.5em;
+  color: burlywood;
+  font-family: monospace;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}

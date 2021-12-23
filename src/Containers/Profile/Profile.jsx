@@ -25,21 +25,21 @@ const Profile = () => {
         <div className='designProfile'>
             <div className="Contenedor">
                 <div className="caja1">
-                    <div className='zonafotopadre'>
+                    <div className='infoZone'>
 
                     </div>
                     <div className='Zonainfo'>
-                        <div class="p-1 mb-1 bg-primary text-white">ID PSN<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>Arnold</p></div>
                         <div class="p-1 mb-1 bg-secondary text-white">ID Steam<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-success text-white">ID xbox<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-danger text-white">ID Nintendo<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-warning text-dark">ID Epic Games<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-info text-dark">ID Activision<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-light text-dark">ID Blizzard<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-dark text-white">ID RiotGames<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-body text-dark">ID Uplay<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-white text-dark">ID Battlenet<p>Arnold</p></div>
-                        <div class="p-1 mb-1 bg-transparent text-dark">ID Bethesda<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID xbox<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Nintendo<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Epic Games<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Activision<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Blizzard<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID RiotGames<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Uplay<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Battlenet<p>Arnold</p></div>
+                        <div class="p-1 mb-1 bg-secondary text-white">ID Bethesda<p>Arnold</p></div>
                         <div className='info'>
 
                         </div>

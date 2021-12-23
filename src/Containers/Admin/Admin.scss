@@ -1,22 +1,43 @@
-.designAdmin{
-    background-color: #2f4a4b;
+
+.main-container-one {
     height: 100%;
     min-height: calc(100vh - 5.5em);
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-tr {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.header-tools {
-    display: flex;
+    flex-direction: column;
+    background-color: #6e6e6e;
 }
 
-.containertable {
+.users-registers-title {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.table-home-print{
+    display: flex;
+    justify-content: center;
+    
+    }
+p.colum-components-admin-print-register{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 0.01px solid;
+    border-right: 0.01px solid;
+    padding: 15px 15px;
+    width: 14em;
+    margin: 0;
+    background-color: rgb(255, 255, 255)
+}
+.colum-home-print{
+    background-color: #ffffff;
+    
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }

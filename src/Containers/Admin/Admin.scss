@@ -2,4 +2,21 @@
     background-color: #2f4a4b;
     height: 100%;
     min-height: calc(100vh - 5.5em);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-tools {
+    display: flex;
+}
+
+.containertable {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,8 +1,10 @@
 
 .designHome{
-    background-color: #6e6e6e;
-    height: 100%;
-    min-height: calc(100vh - 5.5em);
+  background-color: #6e6e6e;
+  height: 100%;
+  min-height: calc(100vh - 5.5em);
+  display: flex;
+  flex-direction: column;
 }
 .drop-button{
     background-color:  #000000;
@@ -118,6 +120,7 @@ div#img4 {
   font-family: monospace;
   font-size: 2em;
   color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
  
 }
 .embed-responsive embed-responsive-16by9{

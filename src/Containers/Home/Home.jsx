@@ -26,6 +26,7 @@ const Home = () => {
       }
     }
   }
+  
   return (
     <div className='designHome'>
       <div className="dropdown">
@@ -54,7 +55,7 @@ const Home = () => {
 
         </div>
         
-      </div><p className='psocial'>Follow us on our social networks</p>
+      </div><p className='psocial'>Follow us on our social networks!</p>
       <div className='iconsSocial'>
       <a href="http://instagram.com">
         <div className='instagram'></div></a>

@@ -11,7 +11,7 @@ const Footer = () => {
             
             <footer>
                <div>
-                   <p>© Tu red social de videojuegos 2022</p>
+                   <p>©Your social network for videogames 2022</p>
                </div>
             </footer>   
                 

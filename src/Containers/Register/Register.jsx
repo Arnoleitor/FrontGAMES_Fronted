@@ -1,36 +1,146 @@
 import './Register.scss'
-import React from 'react';
-
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
 
 
 const Register = () => {
 
+
+    let history = useNavigate();
+
+
+    const [msgError, setmsgError] = useState("");
+    const [user, setUser] = useState({
+        name: '',
+        age: '',
+        surname: '',
+        nickname: '',
+        favoritegame: '',
+        city: '',
+        email: '',
+        password: '',
+        idpsn: '',
+        idsteam: '',
+        idxbox: '',
+        idnintendo: '',
+        idepicgames: '',
+        idactivision: '',
+        idblizzard: '',
+        idriotgames: '',
+        iduplay: '',
+        idbattlenet: '',
+        idbethesda: '',
+        role: 'user',
+    });
+
+    const userHandler = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+    }
+
+    useEffect(() => {
+
+    }, []);
+
+    useEffect(() => {
+    });
+
+    const sendDataRegister = async () => {
+     
+
+        if (! /[a-z]/gi.test(user.name) ) {
+           setmsgError("Wrong name");
+           return;
+        };
+        
+        if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(user.email)) {
+           setmsgError("Wrong email");
+           return;
+        };
+
+        if (user.password.length <8) {
+            setmsgError("The password must be at least 8 characters long");
+            return;
+        };
+        
+        console.log(user.password.length)
+
+
+         let body = {
+            name: user.name,
+            age: user.age,
+            surname: user.surname,
+            nickname: user.nickname,
+            favoritegame: user.favoritegame,
+            city: user.city,
+            email: user.email,
+            password: user.password,
+            idpsn: user.idpsn,
+            idsteam: user.idsteam,
+            idxbox: user.idxbox,
+            idnintendo: user.idnintendo,
+            idepicgames: user.idepicgames,
+            idactivision: user.idactivision,
+            idblizzard: user.idblizzard,
+            idriotgames: user.idriotgames,
+            iduplay: user.iduplay,
+            idbattlenet: user.idbattlenet,
+            idbethesda: user.idbethesda,
+            role: user.role
+        }
+
+
+
+        console.log("SENDING DATA TO THE BACKEND ....",body);
+
+        
+        try {
+
+            let res = await axios.post("https://acefrontedgames.herokuapp.com/api/newUser", body);
+            setmsgError("User registered successfully, I redirect you to the Login page");
+         
+            
+
+        } catch (error) {
+            console.log(error)
+            setmsgError("The user could not be registered, this email already exists !!");
+            return;
+        }
+        setTimeout(()=>{
+            history("/Login");
+        },2000);
+    };
+
+
+
+
     return (
 
-        <div class='designRegister'>
+        <div className='designRegister'>
             <div id="recuadroRegistro">
                 <p id="texto">SIGN UP FOR FrontedGAMES HERE</p>
-                <input id="relleno1" type='text' name='name' title='name' lenght='30' placeholder='Name' />
-                <input id="relleno1" type='text' name='surname' title='surname' lenght='30' placeholder='Surname (Optional)' />
-                <input id="relleno1" type='text' name='Nickname' title='Nickname' lenght='30' placeholder='Nickname' />
-                <input id="relleno1" type='email' name='email' title='email' lenght='30' placeholder='Email' />
-                <input id="relleno1" type='text' name='city' title='city' lenght='30' placeholder='City (Optional)' />
-                <input id="relleno1" type='password' name='password' title='password' lenght='30' placeholder='Password' />
-                <input id="relleno1" type='password' name='password2' title='password2' lenght='30' placeholder='Repeat Password' />
-                <input id="relleno1" type='text' name='ID PSN' title='ID PSN' lenght='30' placeholder='ID PSN (Optional)' />
-                <input id="relleno1" type='text' name='ID Steam' title='ID Steam' lenght='30' placeholder='ID Steam (Optional)' />
-                <input id="relleno1" type='text' name='ID xbox' title='ID xbox' lenght='30' placeholder='ID xbox (Optional)' />
-                <input id="relleno1" type='text' name='ID Nintendo' title='ID Nintendo' lenght='30' placeholder='ID Nintendo (Optional)' />
-                <input id="relleno1" type='text' name='ID Epic Games' title='ID Epic Games' lenght='30' placeholder='ID Epic Games (Optional)' />
-                <input id="relleno1" type='text' name='ID Activision' title='ID Activision' lenght='30' placeholder='ID Activision (Optional)' />
-                <input id="relleno1" type='text' name='ID Blizzard' title='ID Blizzard' lenght='30' placeholder='ID Blizzard (Optional)' />
-                <input id="relleno1" type='text' name='ID RiotGames' title='ID RiotGames' lenght='30' placeholder='ID RiotGames (Optional)' />
-                <input id="relleno1" type='text' name='ID Uplay' title='ID Uplay' lenght='30' placeholder='ID Uplay (Optional)' />
-                <input id="relleno1" type='text' name='ID Battlenet' title='ID Battlenet' lenght='30' placeholder='ID Battlenet (Optional)' />
-                <input id="relleno1" type='text' name='ID Bethesda' title='ID Bethesda' lenght='30' placeholder='ID Bethesda (Optional)' />
-                <div className="botonSend" >Register</div>
-                <div>{ }</div>
+                <input id="relleno1" type='text' name='name' title='name' onChange={userHandler} lenght='30' placeholder='Name' />
+                <input id="relleno1" type='text' name='surname' title='surname'  onChange={userHandler} lenght='30' placeholder='Surname (Optional)' />
+                <input id="relleno1" type='text' name='favoritegame' title='favoritegame'  onChange={userHandler} lenght='30' placeholder='Favorite game (Optional)' />
+                <input id="relleno1" type='text' name='nickname' title='nickname'  onChange={userHandler} lenght='30' placeholder='Nickname' />
+                <input id="relleno1" type='number' name='age' title='age'  onChange={userHandler} lenght='30' placeholder='Age (Optional)'  />
+                <input id="relleno1" type='email' name='email' title='email'  onChange={userHandler} lenght='30' placeholder='Email' />
+                <input id="relleno1" type='text' name='city' title='city'  onChange={userHandler} lenght='30' placeholder='City (Optional)' />
+                <input id="relleno1" type='password' name='password' title='password'  onChange={userHandler} lenght='30' placeholder='Password' />
+                <input id="relleno1" type='text' name='idpsn' title='idpsn'  onChange={userHandler} lenght='30' placeholder='ID PSN (Optional)' />
+                <input id="relleno1" type='text' name='idsteam' title='idsteam' onChange={userHandler} lenght='30' placeholder='ID Steam (Optional)' />
+                <input id="relleno1" type='text' name='idxbox' title='idxbox'  onChange={userHandler} lenght='30' placeholder='ID xbox (Optional)' />
+                <input id="relleno1" type='text' name='idnintendo' title='idnintendo'  onChange={userHandler} lenght='30' placeholder='ID Nintendo (Optional)' />
+                <input id="relleno1" type='text' name='idepicgames' title='idepicgames'  onChange={userHandler} lenght='30' placeholder='ID Epic Games (Optional)' />
+                <input id="relleno1" type='text' name='idactivision' title='idactivision'  onChange={userHandler} lenght='30' placeholder='ID Activision (Optional)' />
+                <input id="relleno1" type='text' name='idblizzard' title='idblizzard'  onChange={userHandler} lenght='30' placeholder='ID Blizzard (Optional)' />
+                <input id="relleno1" type='text' name='idriotgames' title='idriotgames'  onChange={userHandler} lenght='30' placeholder='ID RiotGames (Optional)' />
+                <input id="relleno1" type='text' name='iduplay' title='iduplay'  onChange={userHandler} lenght='30' placeholder='ID Uplay (Optional)' />
+                <input id="relleno1" type='text' name='idbattlenet' title='idbattlenet' onChange={userHandler} lenght='30' placeholder='ID Battlenet (Optional)' />
+                <input id="relleno1" type='text' name='idbethesda' title='idbethesda'  onChange={userHandler} lenght='30' placeholder='ID Bethesda (Optional)' />
+                <div className="botonSend" onClick={() => sendDataRegister()}>Register</div>
+                <div>{msgError}</div>
 
             </div>
         </div>

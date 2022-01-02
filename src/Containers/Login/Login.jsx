@@ -32,8 +32,7 @@ const Login = (props) => {
           
             let res = await axios.post("https://acefrontedgames.herokuapp.com/api/loginUser", body);
             
-            // let number_user= (Object.keys(res.data.user));
-            // number_user= number_user.toString()[number_user]
+
 
             setmsgError(`inicio de sesión correcto ${res.data.user.name}....`);
             console.log(res)

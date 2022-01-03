@@ -37,10 +37,10 @@ const Profile = (props) => {
     };
 
     try {
-
-      let res = await axios.put(`https://acefrontedgames.herokuapp.com/api/User/`, token);
+      console.log(userData, token)
+      let res = await axios.put(`https://acefrontedgames.herokuapp.com/api/User/${userData.id}`, userData, token);
       setmsgError(`Updated profile data ${res.data.user.body}....`);
-
+     
 
 
     } catch (error) {

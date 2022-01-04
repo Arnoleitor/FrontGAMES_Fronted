@@ -38,9 +38,9 @@ const Profile = (props) => {
 
     try {
       console.log(userData, token)
-      let res = await axios.put(`https://acefrontedgames.herokuapp.com/api/User/${userData.id}`, userData, token);
+      let res = await axios.put(`https://acefrontedgames.herokuapp.com/api/User`, userData, token);
       setmsgError(`Updated profile data ${res.data.user.body}....`);
-     
+      console.log(res)
 
 
     } catch (error) {
@@ -61,6 +61,7 @@ const Profile = (props) => {
           </div>
           <div className='Zonainfo'>
             <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>{props.credentials.user.idpsn}</p></div>
+            <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>{props.credentials.user.email}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Steam<p>{props.credentials.user.idsteam}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID xbox<p>{props.credentials.user.idxbox}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Nintendo<p>{props.credentials.user.idnintendo}</p></div>
@@ -82,6 +83,7 @@ const Profile = (props) => {
           <div className='UpdateProfile'> <p>YOUR DATA PROFILE</p>
             <div className='Updater'>
 
+          
               <input className='relleno2' type='text' placeholder="Enter new Name" name="name" onChange={manejaInputs} />
               <input className='relleno2' type='hidden' placeholder="" name="role" onChange={manejaInputs} />
               <input className='relleno2' type='number' placeholder="Enter new Age" name="age" onChange={manejaInputs} />

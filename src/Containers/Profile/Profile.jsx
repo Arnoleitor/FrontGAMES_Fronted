@@ -83,6 +83,7 @@ const Profile = (props) => {
             <div className='Updater'>
 
               <input className='relleno2' type='text' placeholder="Enter new Name" name="name" onChange={manejaInputs} />
+              <input className='relleno2' type='hidden' placeholder="" name="role" onChange={manejaInputs} />
               <input className='relleno2' type='number' placeholder="Enter new Age" name="age" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new Surname" name="surname" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new Nickname" name="nickname" onChange={manejaInputs} />

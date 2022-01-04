@@ -1,10 +1,31 @@
 import './Post.scss'
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { POST } from '../../Redux/types';
 
 
 
+const Post = (props) => {
 
-const Post = () => {
+  const newPost = async (post) => {
+
+    const body = {
+
+        title: post.title,
+        text: post.text,
+        image: post.image,
+
+
+    }
+    let token = props.credentials.token;
+    let config = {
+        headers: { Authorization: `Bearer ${token}` }
+    };
+
+    let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Post", body, config);
+
+}
 
   const createpost = async () => {
     let element = document.getElementById("createpost");
@@ -96,11 +117,13 @@ const Post = () => {
 
               <div className='popUs'>
 
-                <textarea className='popUsStyle' name="textarea" rows="8" cols="80" placeholder='Write your post here...'></textarea>
-
+                {/* <textarea className='popUsStyle' name="text" rows="8" cols="80" placeholder='Write your post here...'></textarea> */}
+                <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title"  />
+                <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text"  />
+                <input className='popUsStyle' type='text' placeholder="Insert image" name="image"  />
               </div>
 
-              <div className="CreateDataPost">Create post</div>
+              <div className="CreateDataPost" onClick={() => newPost(Post)}>Create post</div>
 
             </div>
 

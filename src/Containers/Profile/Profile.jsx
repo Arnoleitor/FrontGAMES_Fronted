@@ -93,11 +93,11 @@ const Profile = (props) => {
               <input className='relleno2' type='text' placeholder="Enter new ID of PSN" name="idpsn" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Steam" name="idsteam" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of XBOX" name="idxbox" onChange={manejaInputs} />
-              <input className='relleno2' type='text' placeholder="Enter new ID of Riot Games" name="idriotgames" onChange={manejaInputs} />
+              <input className='relleno2' type='text' placeholder="Enter new ID of Riot Games" name="idnintendo" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Epic Games" name="idepicgames" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Activision" name="idactivision" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Blizzard" name="idblizzard" onChange={manejaInputs} />
-              <input className='relleno2' type='text' placeholder="Enter new ID of Nintendo" name="idnintendo" onChange={manejaInputs} />
+              <input className='relleno2' type='text' placeholder="Enter new ID of Nintendo" name="idriotgames" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Uplay" name="iduplay" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of BattleNet" name="idbattlenet" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Bethesda" name="idbethesda" onChange={manejaInputs} />

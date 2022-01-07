@@ -29,7 +29,8 @@ const Home = () => {
   
   return (
     <div className='designHome'>
-      <div className="dropdown">
+      <div className="dropdown"id="socialnetwork">
+        
         <button onClick={() => myFunction()} className="drop-button">MENU</button>
         <div id="myDropdown" className="dropdown-content">
           <a id="enlace1" href="Register">Register</a>
@@ -40,6 +41,14 @@ const Home = () => {
         <div className='Tittle'>
 
         </div>
+        <div className='iconsSocial'>
+      <a href="http://instagram.com">
+        <div className='instagram'></div></a>
+        <div className='space'></div>
+      <a href="http://facebook.com">
+        <div className='facebook'></div></a>
+        <p className='psocial'>Follow us on our social networks!</p>
+      </div>
       </div>
       <div className='IconsBusiness'>
         <div id="img1">
@@ -55,14 +64,8 @@ const Home = () => {
 
         </div>
         
-      </div><p className='psocial'>Follow us on our social networks!</p>
-      <div className='iconsSocial'>
-      <a href="http://instagram.com">
-        <div className='instagram'></div></a>
-        <div className='space'></div>
-      <a href="http://facebook.com">
-        <div className='facebook'></div></a>
       </div>
+      
       <p className='parrafo'>!You can make friends from all these companies!</p>
       <div class="list-group">
         <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Some of the companies that you can add to your profile...</a>

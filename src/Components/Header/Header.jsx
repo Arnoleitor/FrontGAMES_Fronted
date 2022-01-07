@@ -27,6 +27,7 @@ const Header = () => {
                 <Buttons destiny="Login" url="/login" />
                 <Buttons destiny="Post" url="/Post" />
                 <Buttons destiny="Admin" url="/Admin" />
+                {/* <Buttons destiny="Logout" url="/login"/> */}
 
 
 

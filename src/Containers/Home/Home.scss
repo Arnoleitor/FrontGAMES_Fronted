@@ -129,14 +129,13 @@ div#img4 {
   display: flex;
 }
 
-.iconsSocial{
-  height: 4em;
+.iconsSocial {
   width: 30em;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
   padding: 1em;
+  align-items: center;
+  justify-content: center;
 }
 .instagram{
   background-image: url("../../Assets/Images/Ikonka-Instagram.png");
@@ -158,4 +157,15 @@ div#img4 {
   color: burlywood;
   font-family: monospace;
   text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#socialnetwork{
+  display: flex;
+}
+
+div#myDropdown {
+  background-color: black;
+  margin-top: 4.5em;
+  flex-direction: column;
+  margin-left: 0em;
 }

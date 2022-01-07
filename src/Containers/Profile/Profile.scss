@@ -107,3 +107,33 @@
     color: black;
 
 }
+
+.logout {
+    transition: 0.4s;
+    background-color: red;
+    height: 2.1em;
+    width: 8em;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.logout:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    background-color: rgb(153, 0, 255);
+    color: white;
+}
+.designLogout{
+    background-color: #941717;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    color: white;
+}

@@ -24,7 +24,7 @@ const Post = (props) => {
     };
 
     let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Post", body, config);
-
+    
 }
 
   const createpost = async () => {

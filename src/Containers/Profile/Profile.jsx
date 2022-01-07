@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 
 const Profile = (props) => {
 
+
+  
   const [msgError, setmsgError] = useState("");
   const [userData, setUserData] = useState(props.credentials.user);
   
@@ -61,7 +63,7 @@ const Profile = (props) => {
 
           </div>
           <div className='Zonainfo'>
-            <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>{props.credentials.user.idpsn}</p></div>
+            <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>{userData.idpsn}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Steam<p>{props.credentials.user.idsteam}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID xbox<p>{props.credentials.user.idxbox}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Nintendo<p>{props.credentials.user.idnintendo}</p></div>

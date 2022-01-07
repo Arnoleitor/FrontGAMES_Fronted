@@ -2,32 +2,48 @@ import './Post.scss'
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { POST } from '../../Redux/types';
 
 
 
 const Post = (props) => {
 
-  const newPost = async (post) => {
+  const [post, setPost] = useState({
+    title: '',
 
-    const body = {
+    text: '',
 
-        title: post.title,
-        text: post.text,
-        image: post.image,
+    image: ''
+  });
+  const userHandler = (e) => {
+    setPost({ ...post, [e.target.name]: e.target.value });
+  }
+  const [msgError, setmsgError] = useState("");
+  const newPost = async () => {
 
+    let body = {
+      title: post.title,
+
+      text: post.text,
+
+      image: post.image,
 
     }
-    let token = props.credentials.token;
-    let config = {
-        headers: { Authorization: `Bearer ${token}` }
+    let token = {
+      headers: { Authorization: `Bearer ${props.credentials.token}` }
     };
-
-    let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Post", body, config);
     
-}
+    try {
+
+      let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Post", body,token);
+    } catch (error) {
+      console.log(error)
+      setmsgError("No se ha podido crear el post!");
+      return;
+    }
+  }
 
   const createpost = async () => {
+    //ESto no se tocA
     let element = document.getElementById("createpost");
     element.classList.add("WindowMessagePopUp");
     let element_back = document.getElementById("openWindows");
@@ -118,12 +134,12 @@ const Post = (props) => {
               <div className='popUs'>
 
                 {/* <textarea className='popUsStyle' name="text" rows="8" cols="80" placeholder='Write your post here...'></textarea> */}
-                <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title"  />
-                <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text"  />
-                <input className='popUsStyle' type='text' placeholder="Insert image" name="image"  />
+                <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title" onChange={userHandler} />
+                <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text" onChange={userHandler} />
+                <input className='popUsStyle' type='text' placeholder="Insert image" name="image" onChange={userHandler} />
               </div>
 
-              <div className="CreateDataPost" onClick={() => newPost(Post)}>Create post</div>
+              <div className="CreateDataPost" onClick={() => newPost()}>Create post</div>
 
             </div>
 
@@ -189,4 +205,6 @@ const Post = (props) => {
   )
 };
 
-export default Post;
+export default connect((state) => ({
+  credentials: state.credentials
+}))(Post);

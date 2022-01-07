@@ -3,15 +3,17 @@ import { UPDATE_USER, } from '../../Redux/types';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 const Profile = (props) => {
 
+  let history = useNavigate();
 
-  
+
   const [msgError, setmsgError] = useState("");
   const [userData, setUserData] = useState(props.credentials.user);
-  
+
 
   const UpdateData = async () => {
     let element = document.getElementById("createpost");
@@ -50,7 +52,9 @@ const Profile = (props) => {
       setmsgError("Failed to update data");
 
     }
-
+    setTimeout(() => {
+      history("/");
+    }, 1000);
   }
 
 
@@ -63,7 +67,7 @@ const Profile = (props) => {
 
           </div>
           <div className='Zonainfo'>
-            <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>{userData.idpsn}</p></div>
+            <div class="p-1 mb-1 bg-secondary text-white">ID PSN<p>{props.credentials.user.idpsn}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Steam<p>{props.credentials.user.idsteam}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID xbox<p>{props.credentials.user.idxbox}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Nintendo<p>{props.credentials.user.idnintendo}</p></div>
@@ -85,7 +89,7 @@ const Profile = (props) => {
           <div className='UpdateProfile'> <p>YOUR DATA PROFILE</p>
             <div className='Updater'>
 
-          
+
               <input className='relleno2' type='text' placeholder="Enter new Name" name="name" onChange={manejaInputs} />
               <input className='relleno2' type='hidden' placeholder="" name="role" onChange={manejaInputs} />
               <input className='relleno2' type='number' placeholder="Enter new Age" name="age" onChange={manejaInputs} />

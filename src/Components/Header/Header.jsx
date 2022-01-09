@@ -5,6 +5,7 @@ import logo from '../../Assets/Images/Logo.png';
 import Buttons from '../../Components/Buttons/Buttons';
 import { connect } from 'react-redux';
 import profile from '../../Assets/Images/usuarioicono.png';
+
 const Header = (props) => {
     const history = useNavigate();
     const go_to = () => {

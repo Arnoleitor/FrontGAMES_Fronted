@@ -157,7 +157,7 @@ const Post = (props) => {
             
             view_post.map((post) => {
               return (
-            
+                
                 <div className="post">
                   
                   {
@@ -169,8 +169,11 @@ const Post = (props) => {
                     : {
                     post.image
                   }
+                  <div className='zonecoment'>
+                  <textarea className='popUsStyle' name="text" rows="1" cols="50" placeholder='Write your coment here...'></textarea>
+                  <button className='buttoncoment'><div>Coment</div></button></div>
                 </div>
-               
+                
                
               )
             })

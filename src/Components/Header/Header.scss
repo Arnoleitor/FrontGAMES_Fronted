@@ -34,3 +34,8 @@ img#Logo {
     padding-right: 0.3em;
     padding-top: 0.1em;
 }
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

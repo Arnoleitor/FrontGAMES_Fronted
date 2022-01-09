@@ -143,7 +143,7 @@ const Post = (props) => {
 
 
         <div className='wall2'>
-
+          
           <div className='buttonsPost'>
 
             <div onClick={() => createpost()} className='buttonCreatePost'>
@@ -154,21 +154,24 @@ const Post = (props) => {
               Delete post
             </div>
           </div>{
+            
             view_post.map((post) => {
               return (
+            
                 <div className="post">
+                  
                   {
                     post.title
 
                   } : {
                     post.text
                   }
-                  : {
+                    : {
                     post.image
                   }
-
                 </div>
-
+               
+               
               )
             })
           }

@@ -2,7 +2,7 @@ import './Post.scss'
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-
+import { RES_POST } from '../../Redux/types';
 
 
 const Post = (props) => {
@@ -41,9 +41,26 @@ const Post = (props) => {
       return;
     }
   }
+  let config = {
+    headers: { Authorization: `Bearer ${props.credentials.token}`}
+};
+const [view_post, setRES_POST] = useState([]);
+
+    const RES_POST = async () => {
+        let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Post`,config);
+        setRES_POST(res.data);
+        console.log(res.data.profile); 
+
+
+};
+
+useEffect(() => {
+
+  RES_POST()
+}, [])
 
   const createpost = async () => {
-    //ESto no se tocA
+  
     let element = document.getElementById("createpost");
     element.classList.add("WindowMessagePopUp");
     let element_back = document.getElementById("openWindows");
@@ -110,7 +127,7 @@ const Post = (props) => {
 
 
         <div className='wall2'>
-
+          
           <div className='buttonsPost'>
 
             <div onClick={() => createpost()} className='buttonCreatePost'>
@@ -120,7 +137,25 @@ const Post = (props) => {
             <div onClick={() => deletepost()} className='buttonDeletePost'>
               Delete post
             </div>
-          </div>
+          </div>{
+                    view_post.map((post)=>{
+                        return(
+                            <div className="post">
+                                {
+                                    post.title
+                                   
+                                } : {
+                                    post.text
+                                }
+                                : {
+                                    post.image
+                                }
+                                
+                            </div>
+                            
+                        )
+                    })
+                }
 
 
 

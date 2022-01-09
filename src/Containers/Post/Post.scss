@@ -20,6 +20,8 @@
     margin-top: 2.5em;
     width: 50em;
     height: 45em;
+    overflow: auto;
+    
 }
 .wall3{
     
@@ -246,14 +248,23 @@
   
     }
     .post {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        background-color: ghostwhite;
-        width: 100%;
-        height: 2em;
-        border-bottom: inset;
-        cursor: pointer;
+    display: flex;
+    background-color: ghostwhite;
+    width: 100%;
+    height: 10em;
+    border-bottom: inset;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
     }
+  .buttoncoment{
+    display: flex;
+    background-color: rgba(2, 128, 201, 0.459);
+    width: 20%;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    height: 3em;
+  }
+  

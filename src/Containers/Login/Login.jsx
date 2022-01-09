@@ -56,7 +56,7 @@ const Login = (props) => {
 
     return (
 
-        <div class='designLogin'>
+        <div className='designLogin'>
             <div id="recuadroLogin">
                 <p id="texto">LOG IN TO fontedGAMES HERE</p>
                 <input id="relleno1" type='email' name='email' title='email' onChange={manejadorInputs} lenght='30' placeholder='Email' />

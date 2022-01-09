@@ -67,7 +67,7 @@ const Home = () => {
       </div>
       
       <p className='parrafo'>!You can make friends from all these companies!</p>
-      <div class="list-group">
+      <div className="list-group">
         <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Some of the companies that you can add to your profile...</a>
         <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Activision</a>
         <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Nintendo Switch</a>

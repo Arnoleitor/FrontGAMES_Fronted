@@ -1,5 +1,5 @@
 import './Profile.scss'
-import { UPDATE_USER,LOGOUT } from '../../Redux/types';
+import { UPDATE_USER, LOGOUT } from '../../Redux/types';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
@@ -10,13 +10,13 @@ const Profile = (props) => {
 
 
   const logOut = () => {
-    
+
     props.dispatch({ type: LOGOUT });
     setTimeout(() => {
       history("/login");
     }, 1);
-    
-} 
+
+  }
 
   let history = useNavigate();
 
@@ -57,11 +57,11 @@ const Profile = (props) => {
       setmsgError(`Updated profile data ${res.data.user.body}....`);
       console.log(res)
 
-     
+
 
     } catch (error) {
       setmsgError("Failed to update data");
-      
+
     }
     setTimeout(() => {
       history("/");
@@ -98,7 +98,7 @@ const Profile = (props) => {
         <div className="caja2">
 
           <div className='UpdateProfile'> <p>YOUR DATA PROFILE</p>
-          
+
             <div className='Updater'>
 
               <input className='relleno2' type='text' placeholder="Enter new Name" name="name" onChange={manejaInputs} />
@@ -121,15 +121,15 @@ const Profile = (props) => {
               <input className='relleno2' type='text' placeholder="Enter new ID of BattleNet" name="idbattlenet" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Bethesda" name="idbethesda" onChange={manejaInputs} />
               <div className="logout" onClick={() => logOut()}>CERRAR SESIÓN
-                </div>
-                
+              </div>
+
               <div className='buttonUpdate'>
 
                 <div onClick={() => UpdateData()} className='buttonUpdate'>
                   UPDATE
 
                 </div>
-                
+
                 <div className="" id="openWindows">
                   <div className="createPost" id="createpost">
 
@@ -144,7 +144,7 @@ const Profile = (props) => {
                       <div className='ButtonUpdateYes' onClick={() => update()}>
                         Yes
                       </div>
-                      
+
                     </div>
 
                   </div>

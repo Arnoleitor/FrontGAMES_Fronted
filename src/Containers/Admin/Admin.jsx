@@ -22,6 +22,7 @@ const Admin = (props) => {
         try {
             let res = await axios.get("https://acefrontedgames.herokuapp.com/api/Users", token);
             setdatosusuario(res.data);
+            console.log(res)
 
 
         } catch (error) {
@@ -46,35 +47,35 @@ const Admin = (props) => {
     };
     let config = {
         headers: { Authorization: `Bearer ${props.credentials.token}` }
-    
-    
-      };
-    const deleteuser = async (props) => {
-       console.log(props)
+
+
+    };
+    const deleteuser = async (data) => {
+
         try {
-            let res = await axios.delete(`https://acefrontedgames.herokuapp.com/api/User/${props}`,token,);
+            let res = await axios.delete(`https://acefrontedgames.herokuapp.com/api/User/${data}`, token,);
             console.log(res)
             setdatadeleteuser();
-            console.log(props)
-            
+
+
         } catch (error) {
             console.log(error);
         }
 
     };
     const deletepost = async (run) => {
-       
-        
+
+
         try {
-            
-            let res = await axios.delete(`https://acefrontedgames.herokuapp.com/api/Post/${run.run.id}`,token,{
-            headers:{
-                'Authorization': `Bearer ${props.credentials.token}`
-                
-            }
-        });
-        setdatadeleteposts();
-            
+
+            let res = await axios.delete(`https://acefrontedgames.herokuapp.com/api/Post/${run.run.id}`, token, {
+                headers: {
+                    'Authorization': `Bearer ${props.credentials.token}`
+
+                }
+            });
+            setdatadeleteposts();
+
         } catch (error) {
             console.log(error);
         }
@@ -106,7 +107,7 @@ const Admin = (props) => {
                                 })}
 
 
-                               
+
                             </div>
                             <div className="colum-home-print" id='columnemail'>
                                 {datosusuario.map(run => {
@@ -116,7 +117,7 @@ const Admin = (props) => {
                                         </p>
                                     )
                                 })}
-                               
+
 
 
                             </div>
@@ -133,14 +134,14 @@ const Admin = (props) => {
 
                             </div>
                             <div className="colum-home-print">
-                            {datosusuario.map(run => {
-                                        let userdelete = run._id;
-                                        return (
-                                            <p onClick={() => deleteuser({userdelete})} className="colum-components-admin-print-register" key={run._id}>
-                                                <span className="borrar">Delete User</span>
-                                            </p>)
-                                 })}
-                                
+                                {datosusuario.map(run => {
+                                    let userdelete = run._id;
+                                    return (
+                                        <p onClick={() => deleteuser({ userdelete })} className="colum-components-admin-print-register" key={run._id}>
+                                            <span className="delete">Delete User</span>
+                                        </p>)
+                                })}
+
                                 <div>
 
 
@@ -150,65 +151,65 @@ const Admin = (props) => {
                         </div>
                     </div>
                 }<div>
-                <h2>User posts</h2>
-                <div className="last-order-titles">
-                    <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">id post</p></div>
-                    <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">text post</p></div>
-                    <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">ID User</p></div>
-                    <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">Title</p></div>
-                    <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">Delete post</p></div>
-                </div>
-                {datapost.length > 0 &&
-                    <div id="table-home-print">
-                        <div className="colum-home-print">
-                            {datapost.map(run => {
-                                let borrar = run._id;
-                               
-                                return (
-                                    
-                                <div className="table-print-pedidos">
-                                    <div className="ColumnasPrincipales">
-                                        <p className="colum-components-admin-print-pedidos" key={run._id}>
-                                       {run.id}
-                                        </p>
-                                    </div>
-                                    <div className="ColumnasPrincipales">
-                                        <p className="colum-components-admin-print-pedidos" key={run._id}>
-                                        {run.text}
-                                        </p>
-                                    </div>
-                                    <div className="ColumnasPrincipales">
-                                        <p className="colum-components-admin-print-pedidos" key={run._id}>
-                                       {run.iduser}
-                                      
-                                        </p>
-                                    </div>
-                                    <div className="ColumnasPrincipales">
-                                        <p className="colum-components-admin-print-pedidos" key={run._id}>
-                                       {run.title}
-                                      
-                                        </p>
-                                    </div>
-                                    <div className="ColumnasPrincipales">
-                                        <p onClick={() => deletepost({run})}  key={run._id}>
-                                    <span className="borrar">Delete post</span>
-                                    </p>
-                                    
-                                        
-                                    </div>
-                                </div>
-                                )
-                            })}
-                        </div>
+                    <h2>User posts</h2>
+                    <div className="last-order-titles">
+                        <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">id post</p></div>
+                        <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">text post</p></div>
+                        <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">ID User</p></div>
+                        <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">Title</p></div>
+                        <div className="titles-of-last-orders"><p className="colum-components-admin-print-pedidos-titles">Delete post</p></div>
                     </div>
-                }
+                    {datapost.length > 0 &&
+                        <div id="table-home-print">
+                            <div className="colum-home-print">
+                                {datapost.map(run => {
+                                    let borrar = run._id;
+
+                                    return (
+
+                                        <div className="table-print-pedidos">
+                                            <div className="ColumnasPrincipales">
+                                                <p className="colum-components-admin-print-pedidos" key={run._id}>
+                                                    {run.id}
+                                                </p>
+                                            </div>
+                                            <div className="ColumnasPrincipales">
+                                                <p className="colum-components-admin-print-pedidos" key={run._id}>
+                                                    {run.text}
+                                                </p>
+                                            </div>
+                                            <div className="ColumnasPrincipales">
+                                                <p className="colum-components-admin-print-pedidos" key={run._id}>
+                                                    {run.iduser}
+
+                                                </p>
+                                            </div>
+                                            <div className="ColumnasPrincipales">
+                                                <p className="colum-components-admin-print-pedidos" key={run._id}>
+                                                    {run.title}
+
+                                                </p>
+                                            </div>
+                                            <div className="ColumnasPrincipales">
+                                                <p onClick={() => deletepost({ run })} key={run._id}>
+                                                    <span className="delete">Delete post</span>
+                                                </p>
+
+
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
-        </div>
- 
-    )
-}
+
+        )
+    }
 };
 export default connect((state) => ({
-        credentials: state.credentials,
-        post: state.post,
+    credentials: state.credentials,
+    post: state.post,
 }))(Admin);

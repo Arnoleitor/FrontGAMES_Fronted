@@ -47,6 +47,9 @@ const Post = (props) => {
       setmsgError("No se ha podido crear el post!");
       return;
     }
+    setTimeout(() => {
+      window.location.reload();
+    }, 1);
   }
 
   let config = {
@@ -172,6 +175,7 @@ const Post = (props) => {
                   <div className='zonecoment'>
                   <textarea className='popUsStyle' name="text" rows="1" cols="50" placeholder='Write your coment here...'></textarea>
                   <button className='buttoncoment'><div>Coment</div></button></div>
+                  <div className='coments'>coments</div>
                 </div>
                 
                
@@ -190,10 +194,11 @@ const Post = (props) => {
 
               <div className='popUs'>
 
-                {/* <textarea className='popUsStyle' name="text" rows="8" cols="80" placeholder='Write your post here...'></textarea> */}
+             
                 <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title" onChange={userHandler} />
                 <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text" onChange={userHandler} />
                 <input className='popUsStyle' type='text' placeholder="Insert image" name="image" onChange={userHandler} />
+
               </div>
 
               <div className="CreateDataPost" onClick={() => newPost()}>Create post</div>

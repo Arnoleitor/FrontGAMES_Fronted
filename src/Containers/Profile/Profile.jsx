@@ -64,8 +64,8 @@ const Profile = (props) => {
 
     }
     setTimeout(() => {
-      history("/");
-    }, 1000);
+      window.location.reload();
+    }, 1);
   }
 
 

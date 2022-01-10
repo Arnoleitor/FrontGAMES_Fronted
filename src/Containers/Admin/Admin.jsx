@@ -51,7 +51,7 @@ const Admin = (props) => {
 
     };
     const deleteuser = async (data) => {
-
+        console.log(data)
         try {
             let res = await axios.delete(`https://acefrontedgames.herokuapp.com/api/User/${data}`, token,);
             console.log(res)
@@ -135,9 +135,10 @@ const Admin = (props) => {
                             </div>
                             <div className="colum-home-print">
                                 {datosusuario.map(run => {
-                                    let userdelete = run._id;
+                                    let userdelete = run.id;
+                                  
                                     return (
-                                        <p onClick={() => deleteuser({ userdelete })} className="colum-components-admin-print-register" key={run._id}>
+                                        <p onClick={() => deleteuser( userdelete )} className="colum-components-admin-print-register" key={run._id}>
                                             <span className="delete">Delete User</span>
                                         </p>)
                                 })}

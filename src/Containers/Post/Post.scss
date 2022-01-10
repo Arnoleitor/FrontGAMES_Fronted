@@ -263,6 +263,7 @@
         flex-direction: column;
         -webkit-text-stroke-width: thin;
         text-align: justify;
+        padding: 2em 0em;
     }
   .buttoncoment{
     display: flex;
@@ -278,13 +279,38 @@
   .coments{
     background-color: #abc9ff;
     width: 50%;
-    height: 10em;
+    height: -moz-fit-content;
+    height: fit-content;
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     border-radius: 0.2em;
     font-family: monospace;
-    text-align: justify;
+    text-align: left;
+    padding: 0.5em;
+    align-items: flex-start;
+  }
+  .nameusercoment{
+    text-align: center;
+    width: 100%;
+    background-color: #0a47b0;
+    color: white;
+    text-transform: capitalize;
+    height: 2.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .contentpost{
+    display: flex;
+    width: 50%;
+    font-weight: 600;
+    margin-bottom: 1em;
+    align-items: center;
+  }
+  .posttitle{
+      margin-left: 1em;
   }

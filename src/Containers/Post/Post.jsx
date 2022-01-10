@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { RES_POST } from '../../Redux/types';
 import { RES_COMENTS } from '../../Redux/types';
+import imageuser from '../../Assets/Images/imageuser.png';
 
 
 const Post = (props) => {
@@ -74,6 +75,27 @@ const Post = (props) => {
     RES_POST()
   }, [])
 
+  
+  
+
+
+  const createcoment = async (token) => {
+  try {
+    let token = {
+      headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };console.log(token)
+    let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Coment",token);
+    console.log(props)
+  } catch (error) {
+    console.log(error)
+    setmsgError("No se ha podido crear el comentario!");
+    return;
+  }
+  setTimeout(() => {
+    window.location.reload();
+  }, 1)};
+
+
   const [view_coment, setCOMENTS] = useState([]);
 
   const RES_COMENTS = async () => {
@@ -97,7 +119,7 @@ const Post = (props) => {
 
   }
 
-    const closewindowcreate = () => {
+  const closewindowcreate = () => {
     let element = document.getElementById("createpost");
     element.classList.remove("WindowMessagePopUp");
 
@@ -122,6 +144,8 @@ const Post = (props) => {
     element_back.classList.remove("seeWindows");
 
   }
+
+ 
 
 
 
@@ -161,7 +185,7 @@ const Post = (props) => {
 
 
         <div className='wall2'>
-          
+
           <div className='buttonsPost'>
 
             <div onClick={() => createpost()} className='buttonCreatePost'>
@@ -172,48 +196,48 @@ const Post = (props) => {
               Delete post
             </div>
           </div>{
-            
+
             view_post.map((post) => {
               return (
-                
-                <div className="post">
-                  
-                  {
-                    post.title
 
-                  } : {
+                <div className="post">
+                  <div className='contentpost'>
+                  <div><img src={imageuser}/></div>
+                  <div className='posttitle'>{post.title}</div>
+                  </div>
+                  {
+                    // post.title
+
+                  }  {
                     post.text
                   }
-                    : {
-                    post.image
+                   {
+                    // post.image
                   }
                   <div className='zonecoment'>
-                  <textarea className='popUsStyle' name="text" rows="1" cols="50" placeholder='Write your coment here...'></textarea>
-                  <button className='buttoncoment'><div>Coment</div></button></div>{
+                    <textarea className='popUsStyle' name="text" rows="1" cols="50" placeholder='Write your coment here...'></textarea>
+                    <button onClick={() => createcoment()} className='buttoncoment'><div>Coment</div></button></div>{
 
-                  view_coment.map((coment)=>{
+                    view_coment.map((coment) => {
 
-                    if (coment.idpost==post.id){
-                      console.log(coment)
-                      return (
-                      <div className='coments'>coments
-                       {
-                    coment.coment
+                      if (coment.idpost == post.id) {
+                        console.log(coment)
+                        return (
+                          <div className='coments'>
+                            <div className='nameusercoment'>{ coment.nickname }</div><br></br>
+                              {coment.coment}
+                          </div>
+                          
+                        )
+                      }
 
-                  }
-                   {
-                    coment.nickname
-                   }
-                  </div>
-                      )}
+                    })}
 
-                  })}
 
-                  
-                  
+
                 </div>
-                
-               
+
+
               )
             })
           }
@@ -229,7 +253,7 @@ const Post = (props) => {
 
               <div className='popUs'>
 
-             
+
                 <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title" onChange={userHandler} />
                 <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text" onChange={userHandler} />
                 <input className='popUsStyle' type='text' placeholder="Insert image" name="image" onChange={userHandler} />

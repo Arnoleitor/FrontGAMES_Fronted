@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { RES_POST } from '../../Redux/types';
+import { RES_COMENTS } from '../../Redux/types';
 
 
 const Post = (props) => {
@@ -73,6 +74,20 @@ const Post = (props) => {
     RES_POST()
   }, [])
 
+  const [view_coment, setCOMENTS] = useState([]);
+
+  const RES_COMENTS = async () => {
+    let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Coment`, config);
+    setCOMENTS(res.data);
+    console.log(res.data);
+
+
+  };
+
+  useEffect(() => {
+
+    RES_COMENTS()
+  }, [])
   const createpost = async () => {
 
     let element = document.getElementById("createpost");
@@ -174,8 +189,28 @@ const Post = (props) => {
                   }
                   <div className='zonecoment'>
                   <textarea className='popUsStyle' name="text" rows="1" cols="50" placeholder='Write your coment here...'></textarea>
-                  <button className='buttoncoment'><div>Coment</div></button></div>
-                  <div className='coments'>coments</div>
+                  <button className='buttoncoment'><div>Coment</div></button></div>{
+
+                  view_coment.map((coment)=>{
+
+                    if (coment.idpost==post.id){
+                      console.log(coment)
+                      return (
+                      <div className='coments'>coments
+                       {
+                    coment.coment
+
+                  }
+                   {
+                    coment.nickname
+                   }
+                  </div>
+                      )}
+
+                  })}
+
+                  
+                  
                 </div>
                 
                

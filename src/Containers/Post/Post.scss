@@ -251,15 +251,18 @@
   
     }
     .post {
-    display: flex;
-    background-color: ghostwhite;
-    width: 100%;
-    height: 10em;
-    border-bottom: inset;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+        display: flex;
+        background-color: ghostwhite;
+        width: 100%;
+        height: -moz-fit-content;
+        height: fit-content;
+        border-bottom: inset;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        -webkit-text-stroke-width: thin;
+        text-align: justify;
     }
   .buttoncoment{
     display: flex;
@@ -272,4 +275,16 @@
     height: 3em;
     border-radius: 0.5em;
   }
-  
+  .coments{
+    background-color: #abc9ff;
+    width: 50%;
+    height: 10em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.2em;
+    font-family: monospace;
+    text-align: justify;
+  }

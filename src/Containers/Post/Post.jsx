@@ -69,6 +69,7 @@ const Post = (props) => {
   const RES_POST = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Post`, config);
     setRES_POST(res.data);
+    console.log(res)
     
 
   };
@@ -120,8 +121,13 @@ const Post = (props) => {
 
       setmsgError("The coment could not be created!");
       return;
-    }}
 
+    }
+    setTimeout(() => {
+      window.location.reload();
+    }, 1);
+  }
+    
 
 
 
@@ -231,8 +237,12 @@ const Post = (props) => {
                   
                 <div className="post">
                   <div className='contentpost'>
+
                     <div><img src={imageuser} /></div>
-                    <div className='posttitle'>{post.title} {post.nickname}</div>
+
+                    <div className='postname'> User: {post.nickname}</div>
+                    
+                    <div className='postitle'> Title: {post.title}</div>
                     
                   </div>
                   {
@@ -249,13 +259,14 @@ const Post = (props) => {
                     <button onClick={() => createcoment(props,post.id)} className='buttoncoment'><div>Coment</div></button></div>{
 
                     view_coment.map((coment) => {
+                      
 
                       if (coment.idpost == post.id) {
-                       
                         return (
                           <div className='coments'>
                             <div className='nameusercoment'>{coment.nickname}</div><br></br>
                             {coment.coment}
+                            
                           </div>
 
                         )

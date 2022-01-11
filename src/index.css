@@ -16,6 +16,3 @@ code {
 #menu{
   display: flex;
 }
-html, body {
-  overflow: auto;
-}

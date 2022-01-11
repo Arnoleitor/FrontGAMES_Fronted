@@ -61,6 +61,9 @@ const Admin = (props) => {
         } catch (error) {
             console.log(error);
         }
+        setTimeout(() => {
+            window.location.reload();
+          }, 1);
 
     };
     const deletepost = async (run) => {
@@ -79,6 +82,9 @@ const Admin = (props) => {
         } catch (error) {
             console.log(error);
         }
+        setTimeout(() => {
+            window.location.reload();
+          }, 1);
 
     };
     if (props.data_user?.token !== '') {
@@ -142,6 +148,7 @@ const Admin = (props) => {
                                             <span className="delete">Delete User</span>
                                         </p>)
                                 })}
+                                
 
                                 <div>
 

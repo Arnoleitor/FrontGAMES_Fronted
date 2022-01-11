@@ -29,7 +29,7 @@ const Header = (props) => {
                 <div id="admin">{props.credentials?.user.role=='admin' && <Buttons destiny="Admin" url="/admin"/>}</div>
                 <div className="icono-user-logeado">
                 <img className="img-profile" src={profile} alt="profile"  />
-                Logged in user {props?.credentials?.user?.name}
+                Hello again: {props?.credentials?.user?.name}
                     
                 </div>
             </div>

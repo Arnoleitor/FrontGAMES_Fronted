@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { RES_POST } from '../../Redux/types';
 import { RES_COMENTS } from '../../Redux/types';
-import imageuser from '../../Assets/Images/imageuser.png';
+import imageuser from '../../Assets/Images/imageuser2.png';
 
 
 const Post = (props) => {
@@ -37,6 +37,7 @@ const Post = (props) => {
       image: post.image,
 
     }
+    // CREATE POST
     let token = {
       headers: { Authorization: `Bearer ${props.credentials.token}` }
     };
@@ -45,8 +46,8 @@ const Post = (props) => {
 
       let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Post", body, token);
     } catch (error) {
-      console.log(error)
-      setmsgError("No se ha podido crear el post!");
+
+      setmsgError("The post could not be created!");
       return;
     }
     setTimeout(() => {
@@ -54,6 +55,9 @@ const Post = (props) => {
     }, 1);
   }
 
+  // RECEIVE POST
+
+  
   let config = {
     headers: { Authorization: `Bearer ${props.credentials.token}` }
 
@@ -65,8 +69,7 @@ const Post = (props) => {
   const RES_POST = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Post`, config);
     setRES_POST(res.data);
-    console.log(res.data);
-
+    
 
   };
 
@@ -75,34 +78,59 @@ const Post = (props) => {
     RES_POST()
   }, [])
 
-  
-  
 
 
-  const createcoment = async (token) => {
-  try {
+  
+
+  // CREATE COMMENTS
+  const [coment, setComent] = useState({
+
+    iduser: '',
+    idpost: '',
+    coment: '',
+
+  
+  });
+
+  const userHandlercoment = (e) => {
+
+    setComent({ ...coment, [e.target.name]: e.target.value });
+    
+  }
+
+
+  const createcoment = async (props,postid) => {
+  console.log(postid,"aaaaaa")
+    let body = {
+
+      iduser: props.credentials.user.id,
+      idpost: postid,
+      coment: coment.coment,
+
+    }
+    
     let token = {
       headers: { Authorization: `Bearer ${props.credentials.token}` }
-    };console.log(token)
-    let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Coment",token);
-    console.log(props)
-  } catch (error) {
-    console.log(error)
-    setmsgError("No se ha podido crear el comentario!");
-    return;
-  }
-  setTimeout(() => {
-    window.location.reload();
-  }, 1)};
+    };
+
+    try {
+
+      let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Coment", body, token);
+    } catch (error) {
+
+      setmsgError("The coment could not be created!");
+      return;
+    }}
 
 
+
+
+  // RECEIVE COMMENTS
   const [view_coment, setCOMENTS] = useState([]);
 
   const RES_COMENTS = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Coment`, config);
     setCOMENTS(res.data);
-    console.log(res.data);
-
 
   };
 
@@ -145,7 +173,7 @@ const Post = (props) => {
 
   }
 
- 
+
 
 
 
@@ -198,12 +226,14 @@ const Post = (props) => {
           </div>{
 
             view_post.map((post) => {
+              console.log(post)
               return (
-
+                  
                 <div className="post">
                   <div className='contentpost'>
-                  <div><img src={imageuser}/></div>
-                  <div className='posttitle'>{post.title}</div>
+                    <div><img src={imageuser} /></div>
+                    <div className='posttitle'>{post.title} {post.nickname}</div>
+                    
                   </div>
                   {
                     // post.title
@@ -211,23 +241,23 @@ const Post = (props) => {
                   }  {
                     post.text
                   }
-                   {
+                  {
                     // post.image
                   }
                   <div className='zonecoment'>
-                    <textarea className='popUsStyle' name="text" rows="1" cols="50" placeholder='Write your coment here...'></textarea>
-                    <button onClick={() => createcoment()} className='buttoncoment'><div>Coment</div></button></div>{
+                    <textarea className='popUsStyle' name="coment" rows="1" cols="50" placeholder='Write your coment here...'onChange={userHandlercoment}></textarea>
+                    <button onClick={() => createcoment(props,post.id)} className='buttoncoment'><div>Coment</div></button></div>{
 
                     view_coment.map((coment) => {
 
                       if (coment.idpost == post.id) {
-                        console.log(coment)
+                       
                         return (
                           <div className='coments'>
-                            <div className='nameusercoment'>{ coment.nickname }</div><br></br>
-                              {coment.coment}
+                            <div className='nameusercoment'>{coment.nickname}</div><br></br>
+                            {coment.coment}
                           </div>
-                          
+
                         )
                       }
 

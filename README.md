@@ -54,6 +54,7 @@ videojuego o lo que necesite y otros usuarios puedan comentar en dicha publicaci
 * 100% Responsive y mejor diseño.
 * Sistema de chat con amigos.
 * incluir imagenes en las publicaciones.
+* Crear grupos de amigos.
 
 }
 #

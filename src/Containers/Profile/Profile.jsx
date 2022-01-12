@@ -128,7 +128,7 @@ const Profile = (props) => {
               <input className='relleno2' type='text' placeholder="Enter new ID of Uplay" name="iduplay" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of BattleNet" name="idbattlenet" onChange={manejaInputs} />
               <input className='relleno2' type='text' placeholder="Enter new ID of Bethesda" name="idbethesda" onChange={manejaInputs} />
-              <div className="logout" onClick={() => logOut()}>CERRAR SESIÓN
+              <div className="logout" onClick={() => logOut()}>Log out
               </div>
               
 

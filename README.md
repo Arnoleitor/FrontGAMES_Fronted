@@ -1,78 +1,127 @@
 
-# FrontGAMES_Fronted
 
-Enlace AWS:https://main.d1zdk2h0thz2b5.amplifyapp.com/
+<p aling="center">
+  <img src="./src/Assets/Images/Logo.png" width="500" title="hover text">
+</p>
 
-Tu red social de videojuegos, parte Fronted, se utilizan las tecnologías : React,Redux,Html5,SCSS,JS.
+# FrontedGAMES Tu red social de videojuegos 2022
+<br>
 
-# Getting Started with Create React App
+* 🌐 Enlace AWS:https://main.d1zdk2h0thz2b5.amplifyapp.com/
+#
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Tu red social de videojuegos ☺ , parte Fronted, se utilizan las tecnologías🔧 :
+####
 
-## Available Scripts
+ {
+     
+ * React;
+ * Redux;
+ * Html5;
+ * SCSS;
+ * JS;
+ * Axios
+ 
 
-In the project directory, you can run:
+ }
+#
 
-### `npm start`
+Requisitos para funcionamiento en local 💻:
+
+````
+⚙️Clonar repositorio desde esta url https://github.com/Arnoleitor/FrontGAMES_Fronted.git
+⚙️Usar el comando git clone "url" sin comillas para clonarlo en tu equipo.
+⚙️Comando npm i para instalar todas las librerías necesarias que incluye el proyecto.
+⚙️Comando npm start para iniciar el servidor.
+````
+
+#
+### ℹ️DESCRIPCIÓN
+```
+En este proyecto he querido realizar una red social dedicada al mundo de los 
+videojuegos 100% , con ello quería que se dejara de prescindir de redes sociales 
+externas que nada tienen que ver pero aun así se utilizan, he implementado un sistema 
+de publicaciones en el cual un usuario puede crear una para pedir ayuda en X 
+videojuego o lo que necesite y otros usuarios puedan comentar en dicha publicación.
+```
+#
+### ℹ️Mejoras de futuro 🚀{
+
+* Darle click a un usuario y dar la opción de agregar amigo.
+* Poder ver el perfil de tu amigo para poder ver sus ID de las diferentes compañías de videojuegos.
+* 100% Responsive y mejor diseño.
+* Sistema de chat con amigos.
+* incluir imagenes en las publicaciones.
+
+}
+#
+### ℹ️Opciones disponibles actualmente en la web para el usuario:👥{
+* Registro.
+* Inicio de sesión.
+* poder visualizar tus datos y modificarlos en la zona de perfil.
+* Poder crear publicaciones.
+* poder realizar comentarios en las publicaciones.
+* (Admin) poder ver usuarios registrados y eliminarlos.
+* (Admin) poder ver las publicaciones efectuadas.
+}
+### PAGINAS ℹ️📃
+#
+
+* ## Home
+#### En este apartado el usuario entra a la web, tiene la opción de acceder al menú superior o el desplegable para registrarse o iniciar sesión, una vez se inicie sesión ya puede ver sus datos de perfil y los posts.
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/Home.png" width="500" title="hover text">
+</p>
+
+* ## Register
+#### En este apartado el usuario puede registrarse rellenando todos los datos, actualmente es obligado rellenarlos todos, no puede haber dos correos iguales ni apodos, la contraseña deber ser mínimo de ocho caracteres.
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/registro.png" width="500" title="hover text">
+</p>
+
+* ## Log In
+
+#### En este apartado el usuario puede iniciar sesión, si todo es correcto se le redirecciona a la página Home.Si algún dato es incorrecto se notificará.
+
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/Login.png" width="500" title="hover text">
+</p>
+
+* ## Profile
+#### En este apartado el usuario puede ver todos sus datos, puede modificarlos y puede cerrar la sesión.
+
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/Profile.png" width="500" title="hover text">
+</p>
+
+* ## Posts , Chat and Friends
+
+ #### En este apartado el usuario puede crear publicaciones con un título y un texto, en un futuro agregar imágenes(En este momento hay que incluir un carácter en el input para que se publique correctamente).
 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/Post.png" width="500" title="hover text">
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##
 
-### `npm test`
+#### Como puede observarse estas serian las publicaciones y sus respectivos comentarios, se incluye el nickname de la persona que lo ha publicado, título, el texto y en un futuro una imagen, también puede observarse que en los comentarios aparece el nickname de la persona que ha realizado dicho comentario.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/CreateComents.png" width="500" title="hover text">
+</p>
+<br>
 
-### `npm run build`
+##
+ 
+#### Esta es la parte en el que se pueden visualizar los amigos del usuario, en un futuro se podrán seleccionar y dicha persona aparecerá en la sección del chat para poder hablar entre los dos usuarios.
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/FriendsChat.png" width="500" title="hover text">
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Autor ✒️ 
+* #### Arnold Carcelén - Desarrollo de la APP y documentación.

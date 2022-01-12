@@ -25,7 +25,7 @@ const Header = (props) => {
                 {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? null:<Buttons destiny="Profile" url="/Profile"/>}
                 {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? <Buttons destiny="Register" url="/Register" />:null}
                 {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? <Buttons destiny="Login" url="/login" />:null}
-                <Buttons destiny="Post" url="/Post" />
+                {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? null:<Buttons destiny="Post" url="/Post" />}
                 <div id="admin">{props.credentials?.user.role=='admin' && <Buttons destiny="Admin" url="/admin"/>}</div>
                 <div className="icono-user-logeado">
                 <img className="img-profile" src={profile} alt="profile"  />

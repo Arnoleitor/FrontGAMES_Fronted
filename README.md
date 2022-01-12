@@ -21,6 +21,7 @@
  * SCSS;
  * JS;
  * Axios
+ * AWS
  
 
  }
@@ -45,6 +46,7 @@ de publicaciones en el cual un usuario puede crear una para pedir ayuda en X
 videojuego o lo que necesite y otros usuarios puedan comentar en dicha publicación.
 ```
 #
+
 ### ℹ️Mejoras de futuro 🚀{
 
 * Darle click a un usuario y dar la opción de agregar amigo.

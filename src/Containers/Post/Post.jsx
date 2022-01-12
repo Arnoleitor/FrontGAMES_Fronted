@@ -264,7 +264,7 @@ const Post = (props) => {
                     <div><img src={imageuser} /></div>
 
                     <div className='postname'> User: {post.nickname}</div>
-
+                      
                     <div className='postitle'> Title: {post.title}</div>
 
                   </div>

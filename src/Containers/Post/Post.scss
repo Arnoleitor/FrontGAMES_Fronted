@@ -1,5 +1,7 @@
 .designPost{
-    background-color: #9e9e9e42;
+  background-image: linear-gradient(
+    -20deg
+    , #616161 0%, #9bc5c3 100%);
     height: 100%;
     min-height: calc(100vh - 5.5em);
 }
@@ -58,13 +60,13 @@
 }
 .windowChat {
     width: 100%;
-   
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 1em;
+    height: 16em;
     background-color: #dcdcdc;
 }
 
@@ -99,13 +101,30 @@
     margin-bottom: 2em;
     background-color: green;
     color: white;
+    
 }
-.sendbutton:hover {
-    transition: 0.10s;
-    background-color: green;
-    transform: scale(1.1);
-   
-}
+
+.sendbutton {background-image: linear-gradient(to right, #458a25 0%, #7fe700  51%, #3c7422  100%)}
+.sendbutton {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .sendbutton:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+   transform: scale(1.1);
+ }
+
 
 
 .my-update {
@@ -192,12 +211,28 @@
         height: 3em;
        
     }
-    .buttonCreatePost:hover {
-        transition: 0.4s;
-        background-color: green;
-        transform: scale(1.1);
+
+    .buttonCreatePost {background-image: linear-gradient(to right, #458a25 0%, #7fe700  51%, #3c7422  100%)}
+    .buttonCreatePost {
        
-    }
+       padding: 15px 45px;
+       text-align: center;
+       text-transform: uppercase;
+       transition: 0.5s;
+       background-size: 200% auto;
+       color: white;            
+       box-shadow: 0 0 20px #eee;
+       display: block;
+     }
+    
+     .buttonCreatePost:hover {
+       background-position: right center; 
+       color: #fff;
+       text-decoration: none;
+    
+     }
+
+    
     .buttonDeletePost{
         display: flex;
         background-color: #ac0000;
@@ -211,12 +246,30 @@
     
 
     }
-    .buttonDeletePost:hover {
-        transition: 0.4s;
-        background-color: #ac0000;
-        transform: scale(1.1);
-      
-    }
+
+
+    .buttonDeletePost {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
+    .buttonDeletePost {
+     
+       padding: 15px 45px;
+       text-align: center;
+       text-transform: uppercase;
+       transition: 0.5s;
+       background-size: 200% auto;
+       color: white;            
+       box-shadow: 0 0 20px #eee;
+       display: block;
+     }
+
+     .buttonDeletePost:hover {
+       background-position: right center; 
+       color: #fff;
+       text-decoration: none;
+       
+     }
+    
+
+
     
     .popUsStyle{
         border-radius: 0.5em;
@@ -234,6 +287,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-weight: 100;
     }
     .tittleChat{
     background-color: #2f4a4b;
@@ -262,6 +316,7 @@
         -webkit-text-stroke-width: thin;
         text-align: justify;
         padding: 2em 0em;
+        background: radial-gradient(circle, rgba(228,230,236,1) 0%, rgba(70,252,238,0.1825105042016807) 100%);
     }
   .buttoncoment{
     display: flex;
@@ -308,6 +363,11 @@
     font-weight: 600;
     margin-bottom: 1em;
     align-items: center;
+    border-style: outset;
+    border-radius: 0.5em;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: row;
   }
   .posttitle{
     margin-left: 1em;
@@ -315,8 +375,6 @@
 
   .postname{
     margin-left: 1em;
-    background-color: paleturquoise;
-    border-radius: 0.3em;
   }
 
   .nameuserfriends{
@@ -326,7 +384,6 @@
     overflow: auto;
     border-radius: 0.5em;
     font-family: monospace;
-    background: linear-gradient(
-        90deg
-        , rgba(221,220,228,1) 0%, rgba(192,192,198,0.5158438375350141) 35%, rgba(162,195,207,0.4542191876750701) 42%, rgba(0,212,255,1) 100%);
+    cursor: pointer;
+    background: linear-gradient(90deg,#dddce4 0%, rgba(192, 192, 198, 0.5158438375) 35%, rgba(162, 195, 207, 0.4542191877) 42%, #59e3ff54 100%);
   }

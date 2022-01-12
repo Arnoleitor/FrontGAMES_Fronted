@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { RES_POST } from '../../Redux/types';
 import { RES_COMENTS } from '../../Redux/types';
+import { RES_FRIENDS } from '../../Redux/types';
 import imageuser from '../../Assets/Images/imageuser2.png';
 
 
@@ -57,7 +58,7 @@ const Post = (props) => {
 
   // RECEIVE POST
 
-  
+
   let config = {
     headers: { Authorization: `Bearer ${props.credentials.token}` }
 
@@ -69,8 +70,8 @@ const Post = (props) => {
   const RES_POST = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Post`, config);
     setRES_POST(res.data);
-    console.log(res)
-    
+   
+
 
   };
 
@@ -81,7 +82,7 @@ const Post = (props) => {
 
 
 
-  
+
 
   // CREATE COMMENTS
   const [coment, setComent] = useState({
@@ -90,18 +91,18 @@ const Post = (props) => {
     idpost: '',
     coment: '',
 
-  
+
   });
 
   const userHandlercoment = (e) => {
 
     setComent({ ...coment, [e.target.name]: e.target.value });
-    
+
   }
 
 
-  const createcoment = async (props,postid) => {
-  console.log(postid,"aaaaaa")
+  const createcoment = async (props, postid) => {
+    
     let body = {
 
       iduser: props.credentials.user.id,
@@ -109,7 +110,7 @@ const Post = (props) => {
       coment: coment.coment,
 
     }
-    
+
     let token = {
       headers: { Authorization: `Bearer ${props.credentials.token}` }
     };
@@ -127,7 +128,7 @@ const Post = (props) => {
       window.location.reload();
     }, 1);
   }
-    
+
 
 
 
@@ -144,6 +145,28 @@ const Post = (props) => {
 
     RES_COMENTS()
   }, [])
+
+
+  //RECEIVE FRIENDS
+
+  const [view_friends, setFRIENDS] = useState([])
+
+
+  const RES_FRIENDS = async () => {
+    let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Friend`, config);
+    setFRIENDS(res.data);
+  
+
+  };
+
+  useEffect(() => {
+
+    RES_FRIENDS()
+  }, [])
+
+
+
+
   const createpost = async () => {
 
     let element = document.getElementById("createpost");
@@ -234,16 +257,16 @@ const Post = (props) => {
             view_post.map((post) => {
               console.log(post)
               return (
-                  
+
                 <div className="post">
                   <div className='contentpost'>
 
                     <div><img src={imageuser} /></div>
 
                     <div className='postname'> User: {post.nickname}</div>
-                    
+
                     <div className='postitle'> Title: {post.title}</div>
-                    
+
                   </div>
                   {
                     // post.title
@@ -255,18 +278,18 @@ const Post = (props) => {
                     // post.image
                   }
                   <div className='zonecoment'>
-                    <textarea className='popUsStyle' name="coment" rows="1" cols="50" placeholder='Write your coment here...'onChange={userHandlercoment}></textarea>
-                    <button onClick={() => createcoment(props,post.id)} className='buttoncoment'><div>Coment</div></button></div>{
+                    <textarea className='popUsStyle' name="coment" rows="1" cols="50" placeholder='Write your coment here...' onChange={userHandlercoment}></textarea>
+                    <button onClick={() => createcoment(props, post.id)} className='buttoncoment'><div>Coment</div></button></div>{
 
                     view_coment.map((coment) => {
-                      
+
 
                       if (coment.idpost == post.id) {
                         return (
                           <div className='coments'>
                             <div className='nameusercoment'>{coment.nickname}</div><br></br>
                             {coment.coment}
-                            
+
                           </div>
 
                         )
@@ -336,8 +359,34 @@ const Post = (props) => {
           <div>
 
             <div className='friends'>
+
               <div className='headerfriends'><p>FRIENDS</p>
+
               </div>
+              {
+
+                view_friends.map((friends) => {
+
+                  {
+                    return (
+                      <div className='friendsname'>
+                        <div className='nameuserfriends'>{
+
+                        }  {
+                            friends.iduser2
+                          }
+                          {
+                            friends.name
+                          }
+
+                        </div>
+
+                      </div>
+
+                    )
+                  }
+
+                })}
             </div>
 
             <div className='chat'>

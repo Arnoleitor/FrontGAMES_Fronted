@@ -47,7 +47,7 @@
     overflow: auto;
 }
 .UpdateProfile{
-    background-color: #848484;
+   
     height: 100%;
     width: 100%;
     display: flex;
@@ -82,6 +82,29 @@
     cursor: pointer;
 }
 
+
+.buttonUpdate {background-image: linear-gradient(to right, #56ab2f 0%, #a8e063  51%, #56ab2f  100%)}
+.buttonUpdate {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+  
+ }
+
+ .buttonUpdate:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
 .ButtonUpdateNo{
     
     display: flex;
@@ -111,24 +134,33 @@
 }
 
 .logout {
-    transition: 0.4s;
-    background-color: red;
-    height: 2.1em;
-    width: 8em;
     border-radius: 0.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 1em;
     cursor: pointer;
 }
 
-.logout:hover{
-    transition: 1s;
-    transform: scale(1.1);
-    background-color: rgb(153, 0, 255);
-    color: white;
-}
+
+.logout {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
+    .logout {
+     
+       padding: 15px 45px;
+       text-align: center;
+       text-transform: uppercase;
+       transition: 0.5s;
+       background-size: 200% auto;
+       color: white;            
+       box-shadow: 0 0 20px #eee;
+       display: block;
+     }
+
+     .logout:hover {
+       background-position: right center; 
+       color: #fff;
+       text-decoration: none;
+       
+     }
+
+
 .designLogout{
     background-color: #941717;
     height: 100vh;

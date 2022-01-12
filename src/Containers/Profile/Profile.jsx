@@ -132,7 +132,7 @@ const Profile = (props) => {
               </div>
               
 
-              <div className='buttonUpdate'>
+              <div className='zonebuttonUpdate'>
 
                 <div onClick={() => UpdateData()} className='buttonUpdate'>
                   UPDATE

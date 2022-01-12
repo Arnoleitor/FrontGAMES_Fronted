@@ -22,7 +22,7 @@ const Header = (props) => {
             <div id="menu">
 
                 <Buttons destiny="Home" url="/" />
-                <Buttons destiny="Profile" url="/Profile" />
+                <Buttons destiny="Profile" url="/Profile"/>
                 <Buttons destiny="Register" url="/Register" />
                 <Buttons destiny="Login" url="/login" />
                 <Buttons destiny="Post" url="/Post" />

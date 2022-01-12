@@ -303,20 +303,20 @@
   
     }
     .post {
-        display: flex;
-        background-color: ghostwhite;
-        width: 100%;
-        height: -moz-fit-content;
-        height: fit-content;
-        border-bottom: inset;
-        cursor: pointer;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        -webkit-text-stroke-width: thin;
-        text-align: justify;
-        padding: 2em 0em;
-        background: radial-gradient(circle, rgba(228,230,236,1) 0%, rgba(70,252,238,0.1825105042016807) 100%);
+    display: flex;
+    background-color: ghostwhite;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: inset;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    -webkit-text-stroke-width: thin;
+    text-align: justify;
+    padding: 2em 0em;
+    background: radial-gradient(circle, rgba(228,230,236,1) 0%, rgba(70,252,238,0.1825105042016807) 100%);
     }
   .buttoncoment{
     display: flex;

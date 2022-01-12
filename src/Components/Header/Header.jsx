@@ -22,9 +22,9 @@ const Header = (props) => {
             <div id="menu">
 
                 <Buttons destiny="Home" url="/" />
-                <Buttons destiny="Profile" url="/Profile"/>
-                <Buttons destiny="Register" url="/Register" />
-                <Buttons destiny="Login" url="/login" />
+                {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? null:<Buttons destiny="Profile" url="/Profile"/>}
+                {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? <Buttons destiny="Register" url="/Register" />:null}
+                {props.credentials?.user.role!='admin' && props.credentials?.user.role!='user'? <Buttons destiny="Login" url="/login" />:null}
                 <Buttons destiny="Post" url="/Post" />
                 <div id="admin">{props.credentials?.user.role=='admin' && <Buttons destiny="Admin" url="/admin"/>}</div>
                 <div className="icono-user-logeado">

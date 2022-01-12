@@ -373,10 +373,11 @@ const Post = (props) => {
                         <div className='nameuserfriends'>{
 
                         }  {
-                            friends.iduser2
-                          }
-                          {
                             friends.name
+                            
+                          }<br></br>
+                          NICKNAME: {
+                            friends.nickname
                           }
 
                         </div>

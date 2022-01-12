@@ -320,7 +320,13 @@
   }
 
   .nameuserfriends{
-    color:white;
-    background-color: red;
+    color: black;
     justify-content: center;
+    border: outset;
+    overflow: auto;
+    border-radius: 0.5em;
+    font-family: monospace;
+    background: linear-gradient(
+        90deg
+        , rgba(221,220,228,1) 0%, rgba(192,192,198,0.5158438375350141) 35%, rgba(162,195,207,0.4542191876750701) 42%, rgba(0,212,255,1) 100%);
   }

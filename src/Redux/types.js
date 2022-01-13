@@ -4,3 +4,4 @@ export const UPDATE_USER ='update_user';
 export const RES_POST = 'res_post';
 export const RES_COMENTS  = 'res_coments';
 export const RES_FRIENDS ='res_friends';
+export const RES_MESSAGE ='res_message';

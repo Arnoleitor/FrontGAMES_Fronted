@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { RES_POST } from '../../Redux/types';
 import { RES_COMENTS } from '../../Redux/types';
 import { RES_FRIENDS } from '../../Redux/types';
+import { RES_MESSAGE } from '../../Redux/types';
 import imageuser from '../../Assets/Images/imageuser2.png';
 
 
@@ -164,8 +165,26 @@ const Post = (props) => {
     RES_FRIENDS()
   }, [])
 
+  //RECEIVE MESSAGES
 
 
+  const [view_message, setMESSAGE] = useState([])
+
+
+  const RES_MESSAGE = async () => {
+    let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Message`, config);
+    setMESSAGE(res.data);
+
+
+  };
+
+  useEffect(() => {
+
+    RES_MESSAGE()
+  }, [])
+
+
+  ///////////////////////////////////////////
 
   const createpost = async () => {
 
@@ -268,10 +287,10 @@ const Post = (props) => {
                     <div className='postitle'> Title: {post.title}</div>
 
                   </div>
-                   {
+                  {
                     post.text
-                   }
-                 
+                  }
+
                   <div className='zonecoment'>
                     <textarea className='popUsStyle' name="coment" rows="1" cols="50" placeholder='Write your coment here...' onChange={userHandlercoment}></textarea>
                     <button onClick={() => createcoment(props, post.id)} className='buttoncoment'><div>Coment</div></button></div>{
@@ -384,20 +403,43 @@ const Post = (props) => {
 
                 })}
             </div>
+            <div className='tittleChat'><p>PEPE</p>
 
+            </div>
             <div className='chat'>
-              <div className='tittleChat'><p>PEPE</p>
-              </div>
+             
 
               <div className='windowChat'>
 
+                {
+
+                  view_message.map((message) => {
+                    console.log(message)
+                    {
+                      return (
+                        
+                          <div className='messagefriend'>
+
+                            {
+                              message.message
+
+                            }
+
+                          </div>
+
+                      )
+                    }
+
+                  })}
 
                 <div>
+                </div>
+                </div>
                   <input className='zonechat' type="text" placeholder='Write your message...' />
 
-                </div>
+                
 
-              </div>
+              
               <input className='sendbutton' type="submit" value="Send Message"></input>
             </div>
 

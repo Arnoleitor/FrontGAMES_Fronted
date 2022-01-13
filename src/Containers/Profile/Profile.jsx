@@ -52,10 +52,10 @@ const Profile = (props) => {
     };
 
     try {
-      console.log(userData, token)
+
       let res = await axios.put(`https://acefrontedgames.herokuapp.com/api/User`, userData, token);
       setmsgError(`Updated profile data ${res.data.user.body}....`);
-      console.log(res)
+    
 
 
 
@@ -77,7 +77,7 @@ const Profile = (props) => {
           <div className='infoZone'>
 
           </div>
-            <div className='Zonainfo'>
+          <div className='Zonainfo'>
             <div class="p-1 mb-1 bg-secondary text-white">Name<p>{props.credentials.user.name}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">Age<p>{props.credentials.user.age}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">Surname<p>{props.credentials.user.surname}</p></div>
@@ -96,7 +96,7 @@ const Profile = (props) => {
             <div class="p-1 mb-1 bg-secondary text-white">ID Uplay<p>{props.credentials.user.iduplay}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Battlenet<p>{props.credentials.user.idbattlenet}</p></div>
             <div class="p-1 mb-1 bg-secondary text-white">ID Bethesda<p>{props.credentials.user.idbethesda}</p></div>
-            
+
             <div className='info'>
 
             </div>
@@ -130,7 +130,7 @@ const Profile = (props) => {
               <input className='relleno2' type='text' placeholder="Enter new ID of Bethesda" name="idbethesda" onChange={manejaInputs} />
               <div className="logout" onClick={() => logOut()}>Log out
               </div>
-              
+
 
               <div className='zonebuttonUpdate'>
 

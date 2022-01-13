@@ -12,7 +12,7 @@ const Buttons = (props) => {
         history(props.url);
     }
 
-    console.log("props: ", props);
+   
     return (
         <div className="designButtons" onClick={() => go_to()}>{props.destiny}</div>
 

@@ -22,11 +22,11 @@ const Admin = (props) => {
         try {
             let res = await axios.get("https://acefrontedgames.herokuapp.com/api/Users", token);
             setdatosusuario(res.data);
-            console.log(res)
+           
 
 
         } catch (error) {
-            console.log(error);
+            
         }
     };
 
@@ -41,7 +41,7 @@ const Admin = (props) => {
             setdatapost(res_post.data);
 
         } catch (error) {
-            console.log(error);
+           
         }
 
     };
@@ -51,19 +51,19 @@ const Admin = (props) => {
 
     };
     const deleteuser = async (data) => {
-        console.log(data)
+      
         try {
             let res = await axios.delete(`https://acefrontedgames.herokuapp.com/api/User/${data}`, token,);
-            console.log(res)
+           
             setdatadeleteuser();
 
 
         } catch (error) {
-            console.log(error);
+            
         }
         setTimeout(() => {
             window.location.reload();
-          }, 1);
+        }, 1);
 
     };
     const deletepost = async (run) => {
@@ -80,11 +80,11 @@ const Admin = (props) => {
             setdatadeleteposts();
 
         } catch (error) {
-            console.log(error);
+            
         }
         setTimeout(() => {
             window.location.reload();
-          }, 1);
+        }, 1);
 
     };
     if (props.data_user?.token !== '') {
@@ -142,13 +142,13 @@ const Admin = (props) => {
                             <div className="colum-home-print">
                                 {datosusuario.map(run => {
                                     let userdelete = run.id;
-                                  
+
                                     return (
-                                        <p onClick={() => deleteuser( userdelete )} className="colum-components-admin-print-register" key={run._id}>
+                                        <p onClick={() => deleteuser(userdelete)} className="colum-components-admin-print-register" key={run._id}>
                                             <span className="delete">Delete User</span>
                                         </p>)
                                 })}
-                                
+
 
                                 <div>
 

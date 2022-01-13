@@ -126,5 +126,15 @@ videojuego o lo que necesite y otros usuarios puedan comentar en dicha publicaci
 
 #
 
+* ## Admin Panel💼
+
+#### Este es el panel de administrador, el cual solo está disponible al iniciar sesión como administrador, podemos observar que se encuentra disponible los usuarios registrados y los post realizados, se pueden eliminar tanto los usuarios como los post en el caso que fuese necesario.
+
+<p aling="center">
+  <img src="./src/Assets/ImagesReadme/Admin.png" width="500" title="hover text">
+</p>
+
+<br>
+
 # Autor ✒️ 
 * #### Arnold Carcelén - Desarrollo de la APP y documentación.

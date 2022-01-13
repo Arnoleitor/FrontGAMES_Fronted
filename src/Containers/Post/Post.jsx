@@ -70,7 +70,7 @@ const Post = (props) => {
   const RES_POST = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Post`, config);
     setRES_POST(res.data);
-   
+
 
 
   };
@@ -102,7 +102,7 @@ const Post = (props) => {
 
 
   const createcoment = async (props, postid) => {
-    
+
     let body = {
 
       iduser: props.credentials.user.id,
@@ -155,7 +155,7 @@ const Post = (props) => {
   const RES_FRIENDS = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Friend`, config);
     setFRIENDS(res.data);
-  
+
 
   };
 
@@ -255,7 +255,7 @@ const Post = (props) => {
           </div>{
 
             view_post.map((post) => {
-              console.log(post)
+
               return (
 
                 <div className="post">
@@ -264,19 +264,14 @@ const Post = (props) => {
                     <div><img src={imageuser} /></div>
 
                     <div className='postname'> User: {post.nickname}</div>
-                      
+
                     <div className='postitle'> Title: {post.title}</div>
 
                   </div>
-                  {
-                    // post.title
-
-                  }  {
+                   {
                     post.text
-                  }
-                  {
-                    // post.image
-                  }
+                   }
+                 
                   <div className='zonecoment'>
                     <textarea className='popUsStyle' name="coment" rows="1" cols="50" placeholder='Write your coment here...' onChange={userHandlercoment}></textarea>
                     <button onClick={() => createcoment(props, post.id)} className='buttoncoment'><div>Coment</div></button></div>{
@@ -374,7 +369,7 @@ const Post = (props) => {
 
                         }  {
                             friends.name
-                            
+
                           }<br></br>
                           NICKNAME: {
                             friends.nickname

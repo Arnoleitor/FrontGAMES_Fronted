@@ -5,32 +5,44 @@ import React from 'react';
 
 
 const Home = () => {
-  /*Cuando se hace click en el botón, muestra el submenu*/
+
+  /* When the button is clicked, it displays the submenu */
+
   function myFunction() {
-    //Añade una clase al elemento que tenga el id myDropdown
+
+    //Add a class to the element that has the id myDropdown
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
 
   window.onClick = function (event) {
+
     if (!event.target.matches('.drop-button')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
+
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+
+      let i;
+
       for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        //Busca dentro de drop-content los elementos con la clase show
+
+        let openDropdown = dropdowns[i];
+
+        //Search within drop-content the elements with the show class
+
         if (openDropdown.classList.contains('show')) {
-          //elimina la clase show de los elementos dentro de drop-content
+
+          //remove show class from elements inside drop-content
+  
           openDropdown.classList.remove('show');
         }
       }
     }
   }
-  
+
   return (
     <div className='designHome'>
-      <div className="dropdown"id="socialnetwork">
-        
+      <div className="dropdown" id="socialnetwork">
+
         <button onClick={() => myFunction()} className="drop-button">MENU</button>
         <div id="myDropdown" className="dropdown-content">
           <a id="enlace1" href="Register">Register</a>
@@ -42,13 +54,13 @@ const Home = () => {
 
         </div>
         <div className='iconsSocial'>
-      <a href="http://instagram.com">
-        <div className='instagram'></div></a>
-        <div className='space'></div>
-      <a href="http://facebook.com">
-        <div className='facebook'></div></a>
-        <p className='psocial'>Follow us on our social networks!</p>
-      </div>
+          <a href="http://instagram.com">
+            <div className='instagram'></div></a>
+          <div className='space'></div>
+          <a href="http://facebook.com">
+            <div className='facebook'></div></a>
+          <p className='psocial'>Follow us on our social networks!</p>
+        </div>
       </div>
       <div className='IconsBusiness'>
         <div id="img1">
@@ -63,9 +75,9 @@ const Home = () => {
         <div id="img4">
 
         </div>
-        
+
       </div>
-      
+
       <p className='parrafo'>!You can make friends from all these companies!</p>
       <div className="list-group">
         <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Some of the companies that you can add to your profile...</a>

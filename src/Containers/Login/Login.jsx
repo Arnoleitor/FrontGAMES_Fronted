@@ -26,7 +26,7 @@ const Login = (props) => {
             email: credentials.email,
             password: credentials.password,
         };
-        console.log(body)
+        
         try {
 
           
@@ -35,7 +35,7 @@ const Login = (props) => {
 
 
             setmsgError(`inicio de sesión correcto ${res.data.user.name}....`);
-            console.log(res)
+          
            
             
 

@@ -7,6 +7,9 @@
     padding: 0px 1em;
     cursor: pointer;
     border-bottom: inset;
+    position: sticky;
+    top: 0;
+    z-index: 99999999;
 }
 
 img#Logo {

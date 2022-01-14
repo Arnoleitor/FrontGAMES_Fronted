@@ -80,15 +80,15 @@ const Home = () => {
 
       <p className='parrafo'>!You can make friends from all these companies!</p>
       <div className="list-group">
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action">Some of the companies that you can add to your profile...</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Activision</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Nintendo Switch</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">RiotGames</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Steam</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Battlenet</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Blizzard</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action ">Bethesda</a>
-        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Profile" class="list-group-item list-group-item-action list-group-item-dark">And many more...</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action">Some of the companies that you can add to your profile...</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">Activision</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">Nintendo Switch</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">RiotGames</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">Steam</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">Battlenet</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">Blizzard</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action ">Bethesda</a>
+        <a href="https://main.d1zdk2h0thz2b5.amplifyapp.com/Register" class="list-group-item list-group-item-action list-group-item-dark">And many more...</a>
       </div>
     </div>
 

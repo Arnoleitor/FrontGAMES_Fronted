@@ -45,7 +45,7 @@ const Login = (props) => {
             
             
             setTimeout(() => {
-                history("/");
+                history("/Post");
             }, 1500);
         } catch (error) {
             setmsgError("Usuario o Password incorrecto");

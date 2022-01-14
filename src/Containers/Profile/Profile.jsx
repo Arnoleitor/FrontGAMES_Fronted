@@ -105,7 +105,7 @@ const Profile = (props) => {
 
         <div className="caja2">
 
-          <div className='UpdateProfile'> <p>YOUR DATA PROFILE</p>
+          <div className='UpdateProfile'> <p className='ptext'>YOUR DATA PROFILE</p>
 
             <div className='Updater'>
 

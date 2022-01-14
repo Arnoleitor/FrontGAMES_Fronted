@@ -135,8 +135,9 @@ div#img4 {
   display: flex;
   flex-direction: row;
   padding: 1em;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  
 }
 .instagram{
   background-image: url("../../Assets/Images/Ikonka-Instagram.png");

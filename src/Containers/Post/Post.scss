@@ -23,6 +23,7 @@
     width: 50em;
     height: 45em;
     overflow: auto;
+    border-radius: 1em;
     
 }
 .wall3{
@@ -309,7 +310,7 @@
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
-    border-bottom: inset;
+    border-bottom: groove;
     cursor: pointer;
     align-items: center;
     justify-content: space-between;

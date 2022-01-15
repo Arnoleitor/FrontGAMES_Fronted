@@ -87,7 +87,8 @@ const Admin = (props) => {
         }, 1);
 
     };
-    if (props.data_user?.token !== '') {
+    if (props.data_user?.token !== '' && props.credentials?.user.role=='admin') {
+      
         return (
 
             <div className='main-container-one'>

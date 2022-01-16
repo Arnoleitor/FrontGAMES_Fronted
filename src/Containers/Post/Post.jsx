@@ -18,7 +18,7 @@ const Post = (props) => {
 
     text: '',
 
-    image: ''
+    image: 'a'
 
   });
 
@@ -383,7 +383,7 @@ const Post = (props) => {
 
                 <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title" onChange={userHandler} />
                 <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text" onChange={userHandler} />
-                <input className='popUsStyle' type='file' placeholder="Insert image" name="image" onChange={userHandler} />
+                <input className='popUsStyle' type='hidden' placeholder="Insert image" name="image" onChange={userHandler} />
             
             
               </div>

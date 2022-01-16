@@ -9,6 +9,7 @@ import { RES_MESSAGE } from '../../Redux/types';
 import imageuser from '../../Assets/Images/imageuser2.png';
 
 
+
 const Post = (props) => {
 
   const [post, setPost] = useState({
@@ -39,6 +40,7 @@ const Post = (props) => {
       image: post.image,
 
     }
+   
     // CREATE POST
     let token = {
       headers: { Authorization: `Bearer ${props.credentials.token}` }
@@ -175,14 +177,57 @@ const Post = (props) => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Message`, config);
     setMESSAGE(res.data);
 
-
   };
 
   useEffect(() => {
 
     RES_MESSAGE()
   }, [])
+  /////////////////////////////////////////////
+  // CREATE MESSAGE
+//   const [message, setMessage] = useState({
 
+//     idchat: '',
+//     idfriends: '',
+//     message: '',
+
+ 
+//   });
+// console.log(message)
+//   const userHandlermessage = (e) => {
+
+//     setMessage({ ...message, [e.target.name]: e.target.value });
+
+//   }
+//   console.log(message,"aaaaa")
+
+//   const createmessage = async (props, idfriends, idchat) => {
+   
+//     let body = {
+
+//       idchat: idchat,
+//       idfriends: idfriends,
+//       message: message,
+
+//     }
+  
+//     let token = {
+//       headers: { Authorization: `Bearer ${props.credentials.token}` }
+//     };
+    
+//     try {
+
+//       let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Message", body, token);
+//     } catch (error) {
+      
+//       setmsgError("The message could not be created!");
+//       return;
+
+//     }
+//     setTimeout(() => {
+//       window.location.reload();
+//     }, 1);
+//   }
 
   ///////////////////////////////////////////
 
@@ -276,8 +321,9 @@ const Post = (props) => {
             view_post.map((post) => {
 
               return (
-
+                
                 <div className="post">
+                  
                   <div className='contentpost'>
 
                     <div><img src={imageuser} /></div>
@@ -289,6 +335,9 @@ const Post = (props) => {
                   </div>
                   {
                     post.text
+                  }
+                  {
+                    post.image
                   }
 
                   <div className='zonecoment'>
@@ -303,7 +352,7 @@ const Post = (props) => {
                           <div className='coments'>
                             <div className='nameusercoment'>{coment.nickname}</div><br></br>
                             {coment.coment}
-
+                            
                           </div>
 
                         )
@@ -334,8 +383,9 @@ const Post = (props) => {
 
                 <input className='popUsStyle' type='text' placeholder="Enter tittle here" name="title" onChange={userHandler} />
                 <input className='popUsStyle' type='text' placeholder="Enter text here..." name="text" onChange={userHandler} />
-                <input className='popUsStyle' type='text' placeholder="Insert image" name="image" onChange={userHandler} />
-
+                <input className='popUsStyle' type='file' placeholder="Insert image" name="image" onChange={userHandler} />
+            
+            
               </div>
 
               <div className="CreateDataPost" onClick={() => newPost()}>Create post</div>
@@ -374,7 +424,7 @@ const Post = (props) => {
 
             <div className='friends'>
 
-              <div className='headerfriends'><p>FRIENDS</p>
+              <div className='headerfriends'><p className='pfriends'>FRIENDS</p>
 
               </div>
               {
@@ -403,29 +453,29 @@ const Post = (props) => {
 
                 })}
             </div>
-            <div className='tittleChat'><p>PEPE</p>
+            <div className='tittleChat'><p className='pchat'>PEPE</p>
 
             </div>
             <div className='chat'>
-             
+
 
               <div className='windowChat'>
 
                 {
 
                   view_message.map((message) => {
-                    console.log(message)
+                   
                     {
                       return (
-                        
-                          <div className='messagefriend'>
 
-                            {
-                              message.message
+                        <div className='messagefriend'>
 
-                            }
+                          {
+                            message.message
 
-                          </div>
+                          }
+
+                        </div>
 
                       )
                     }
@@ -434,13 +484,14 @@ const Post = (props) => {
 
                 <div>
                 </div>
-                </div>
-                  <input className='zonechat' type="text" placeholder='Write your message...' />
+              </div>
+              <input className='zonechat' type="text" name="message"  placeholder='Write your message...' />
+              {/* onChange={userHandlermessage} */}
 
-                
 
-              
-              <input className='sendbutton' type="submit" value="Send Message"></input>
+
+              <input className='sendbutton'  type="submit" value="Send Message" name="message"></input>
+              {/* onClick={() => createmessage(props)} */}
             </div>
 
           </div>

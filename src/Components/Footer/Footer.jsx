@@ -7,6 +7,7 @@ const Footer = () => {
     
 
     return(
+           
         <div className="designFooter">
             
             <footer>

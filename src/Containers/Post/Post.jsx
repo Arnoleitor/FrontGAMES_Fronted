@@ -334,9 +334,9 @@ const Post = (props) => {
                   {
                     post.text
                   }
-                  {
+                  {/* {
                     post.image
-                  }
+                  } */}
 
                   <div className='zonecoment'>
                     <textarea className='popUsStyle' name="coment" rows="1" cols="50" placeholder='Write your coment here...' onChange={userHandlercoment}></textarea>

@@ -146,10 +146,11 @@
     border-radius: 0.1em;
     }
     #createpost  {
-    color: black;
-    border-radius: 2em;
-    background-color: #9b9b9b;
-    border-radius: 0.1em;
+
+      color: black;
+      border-radius: 2em;
+      border-radius: 0.6em;
+      background: radial-gradient(circle, #e4e6ec47 0%, rgb(70 252 238 / 51%) 100%);
     
     }
     .seeWindows{
@@ -278,13 +279,31 @@
     .popUsStyle{
         border-radius: 0.5em;
     }
+    .popUs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .popUs2{
+    display: flex;
+    flex-direction: column;
+  }
+  
     div#CLOSE {
-    background-color: #ff0000;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
     border-radius: 0.2em;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    transition: 1s;
+    }
+    div#CLOSE:hover {
+      background-position: right center; 
+      color: #fff;
+      text-decoration: none;
+      
     }
     
     .buttonsPost{
@@ -411,4 +430,32 @@
   margin-top: 0;
   margin-bottom: 0;
   text-shadow: 0.1em 0.1em 0.2em black
+}
+
+input{
+  margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 15em;
+    height: 3em;
+}
+
+.CreateDataPost {
+  background-image: linear-gradient(to right, #458a25 0%, #7fe700 51%, #3c7422 100%);
+  border-radius: 1em;
+  width: 10em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.2em;
+  font-family: monospace;
+  transition: 1s;
+}
+.CreateDataPost:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+  
 }

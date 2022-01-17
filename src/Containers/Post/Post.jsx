@@ -158,7 +158,7 @@ const Post = (props) => {
   const RES_FRIENDS = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Friend`, config);
     setFRIENDS(res.data);
-
+    
 
   };
 
@@ -176,58 +176,56 @@ const Post = (props) => {
   const RES_MESSAGE = async () => {
     let res = await axios.get(`https://acefrontedgames.herokuapp.com/api/Message`, config);
     setMESSAGE(res.data);
-
+   
   };
-
+  
   useEffect(() => {
 
     RES_MESSAGE()
   }, [])
   /////////////////////////////////////////////
   // CREATE MESSAGE
-//   const [message, setMessage] = useState({
+  const [message, setMessage] = useState({
 
-//     idchat: '',
-//     idfriends: '',
-//     message: '',
+    message: '',
 
  
-//   });
-// console.log(message)
-//   const userHandlermessage = (e) => {
+  });
 
-//     setMessage({ ...message, [e.target.name]: e.target.value });
+  const userHandlermessage = (e) => {
 
-//   }
-//   console.log(message,"aaaaa")
+    setMessage({ ...message, [e.target.name]: e.target.value });
 
-//   const createmessage = async (props, idfriends, idchat) => {
-   
-//     let body = {
-
-//       idchat: idchat,
-//       idfriends: idfriends,
-//       message: message,
-
-//     }
+  }
   
-//     let token = {
-//       headers: { Authorization: `Bearer ${props.credentials.token}` }
-//     };
+
+  const createmessage = async (props) => {
+  
+    let body = {
+
+      idchat: view_message[0]?.idchat,
+      idfriends: view_message[0]?.idfriends,
+      message: message.message,
+
+    }
+   
+    let token = {
+      headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     
-//     try {
+    try {
 
-//       let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Message", body, token);
-//     } catch (error) {
+      let res = await axios.post("https://acefrontedgames.herokuapp.com/api/Message", body, token);
+    } catch (error) {
       
-//       setmsgError("The message could not be created!");
-//       return;
+      setmsgError("The message could not be created!");
+      return;
 
-//     }
-//     setTimeout(() => {
-//       window.location.reload();
-//     }, 1);
-//   }
+    }
+    setTimeout(() => {
+      window.location.reload();
+    }, 1);
+  }
 
   ///////////////////////////////////////////
 
@@ -485,13 +483,13 @@ const Post = (props) => {
                 <div>
                 </div>
               </div>
-              <input className='zonechat' type="text" name="message"  placeholder='Write your message...' />
-              {/* onChange={userHandlermessage} */}
+              <input className='zonechat' type="text" name="message"  placeholder='Write your message...' onChange={userHandlermessage} />
+             
 
 
 
-              <input className='sendbutton'  type="submit" value="Send Message" name="message"></input>
-              {/* onClick={() => createmessage(props)} */}
+              <input className='sendbutton'  type="submit" value="Send Message" name="message" onClick={() => createmessage(props)}></input>
+              
             </div>
 
           </div>

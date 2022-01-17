@@ -451,7 +451,7 @@ const Post = (props) => {
 
                 })}
             </div>
-            <div className='tittleChat'><p className='pchat'>PEPE</p>
+            <div className='tittleChat'><p className='pchat'>GENERAL CHAT</p>
 
             </div>
             <div className='chat'>

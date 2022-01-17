@@ -144,7 +144,7 @@ const Profile = (props) => {
 
                     <div className="closewindowUpdate" id="CLOSE" onClick={() => closewindowUpdate()}>CLOSE WINDOW</div>
 
-                    <div className='popUs'>
+                    <div className='popUs2'>
 
                       <h1>DO YOU WANT TO UPDATE YOUR PROFILE DATA?</h1>
                       <div onClick={() => closewindowUpdate()} className='ButtonUpdateNo'>

@@ -66,6 +66,7 @@ const Profile = (props) => {
     setTimeout(() => {
       window.location.reload();
     }, 1);
+    alert("Data updated successfully!")
   }
 
 
